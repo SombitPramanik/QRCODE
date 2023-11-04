@@ -6,6 +6,9 @@
     text-decoration: none;
 
 }
+a,button{
+    cursor: pointer;
+}
 :root {
     /* Dark Color Palette */
     --dark-background-color: #162936;   /* Dark Cyan background */
