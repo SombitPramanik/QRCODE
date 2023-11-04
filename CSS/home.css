@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+body {
+    display: flex;
+    width: 100vw;
+    font-family: 'Ubuntu Mono', monospace;
+
+}
+
+.left_menu {
+    width: 18vw;
+    text-transform: capitalize;
+    padding: 2px;
+    /* border-right: 2px dotted gray; */
+
+}
+
+.right_menu {
+    width: 78vw;
+    padding: 5px;
+}
+
+.left_menu,
+.right_menu {
+    height: 100vh;
+    /* border: 1px solid white; */
+    /* margin: top right bottom left; */
+    margin: 0 1vw 0 1vw;
+
+}
+
+.menu_devider {
+    width: .2em;
+    height: 80vh;
+    margin: 10vh 0 0 0;
+    background-color: white;
+    /* transform: translateY(-50%);  */
+    border-radius: 100%;
+}
+
+.logo>img {
+    margin: 10px 50% 10px 50%;
+    transform: translateX(-50%);
+    border: 2px dashed white;
+    border-radius: 100%;
+}
+
+.profile_text {
+    margin: 10px 0 10px 0;
+}
+.profile_text p{
+    margin: 0 0 0 10%;
+}
+.profile_text ul {
+    display: flex;
+}
+
+.profile_text ul li {
+    margin: 10%;
+    font-size: 16px;
+    transition: transform 0.2s;
+
+}
+
+.profile_text ul li a {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.profile_text ul li a:hover {
+    /* box-shadow: [horizontal-offset] [vertical-offset] [blur-radius] [spread-radius] [color] [inset]; */
+    box-shadow: 2px 5px 5px 0px var(--dark-accent-color1);
+}
+
+.profile_text ul li:hover {
+    background-color: var(--dark-background-color);
+
+    transform: scale(1.1);
+}
+
+.nav_devider {
+    width: 15vw;
+    margin: 0 50% 5% 50%;
+    /* place 5% extra margin bottom for better placement of the switches */
+    transform: translateX(-50%);
+    border-radius: 100%;
+
+}
+
+.nav_bar>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_bar>ul li {
+    margin: 10%;
+}
+
+.nav_bar>ul li a {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+/* Right MEnu Staring from Hear */
+.top_brand{
+    border: 2px solid  red;
+    height: 10vh;
+    border-radius: 10px;
+    margin: 0 0 2vh 0;
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+}
+.input_fields{
+    border: 2px solid white;
+    height: 70vh;
+    width: 45%;
+
+}   
+.output_fields{
+    border: 2px solid white;
+    height: 70vh;
+    width: 54%;
+}
+.advertisement{
+    margin: 2vh 0 0 0;
+    height: 10vh;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 10px;
+}

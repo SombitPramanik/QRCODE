@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+:root {
+    /* Dark Color Palette */
+    --dark-background-color: #162936;   /* Dark Cyan background */
+    --dark-text-color: #F8F8F8;         /* Light Gray text */
+    --dark-accent-color1: #8FD6E8;      /* Pastel Blue accent */
+    --dark-accent-color2: #D4FF9D;      /* Pastel Green accent */
+
+    /* Light Color Palette */
+    --light-background-color: whitesmoke; /* Background for light theme */
+    --light-text-color: #162936;         /* Text for light theme */
+    --light-accent-color1: #8FD6E8;      /* Accent 1 for light theme */
+    --light-accent-color2: #D4FF9D;      /* Accent 2 for light theme */
+
+}
+.light-theme {
+    background-color:var(--light-background-color);
+    color: var(--light-text-color) !important;
+    
+
+}
+.light-theme a, .light-theme p{
+    color: var(--light-text-color);
+}
+.dark-theme {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color) !important;
+}
+.dark-theme a,.dark-theme p{
+    color: var(--dark-text-color);
+}
