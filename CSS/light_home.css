@@ -1,0 +1,27 @@
+.light-theme .nav_devider{
+    
+}
+.light-theme .menu_devider{
+    background-color: black;
+    border: 2px solid black;
+
+}
+.light-theme .logo>img{
+    border: 2px dashed green;
+}
+.light-theme .profile_text ul li a{
+    border: 1px solid black;
+}
+.light-theme .nav_bar>ul li a {
+    border: 1px solid black;
+}
+.light-theme .button_hr{
+    color: black;
+    border: 2px solid black;
+}
+.light-theme button{
+    border: 1px solid black;
+}
+.light-theme .advertisement{
+    border: 2px solid black;
+}

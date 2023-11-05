@@ -206,7 +206,7 @@ select{
     text-transform: uppercase;
     width: 60px;
     border-radius: 2px;
-    border: 1px dashed gray;
+    border: 2px dashed gray;
     color: green;
     height: 30px;
     background-color: transparent;
