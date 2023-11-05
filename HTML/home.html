@@ -1,9 +1,15 @@
 <body id="theme-switcher" class="light-theme">
-    <div id="betaNotice" style="display: none; background-color: yellow; text-align: center; padding: 10px;">
-        <p>This version of the website is in beta testing phase.</p>
-        <p>It is a developer-only preview.</p>
-        <p>Best viewed on: Laptop (medium to large screen)</p>
-      </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>This version of the website is in beta testing phase.</p>
+            <p>It is a developer-only preview.</p>
+            <p>Best viewed on: Laptop (medium to large screen)</p>
+            <p>We are working on other screen sizes, also.</p>
+            <p><br></p>
+            <p>ThankYou</p><br>
+            <button id="acknowledge" class="acknowledge-button">OK</button>
+        </div>
+    </div>
     <!-- This will be converted into the top navigation bar in Mobile Device, and if the display be large enough then this will work like as an detailed navigation bar uses for profile and other navigation links  -->
     <section class="left_menu">
         <nav>
@@ -34,7 +40,8 @@
         </nav>
         <p>
             &copy; <i>SPWS</i> 2023 all rights reserved <br><br>
-            all Design and Colure Code are Property of Sombit Pramanik Web Services. Use without Permission have Copyright issue
+            all Design and Colure Code are Property of Sombit Pramanik Web Services. Use without Permission have
+            Copyright issue
         </p>
     </section>
     <hr class="menu_devider">
@@ -199,27 +206,30 @@
             </div>
             <hr class="output_hr">
             <div class="output_fields">
-                <p><span style="font-weight: 600;">New QRCode Preview</span><br><br>Note : we use data collection policies under some condition's, if you want to delete your data with us you can just make a simple request in our main website,and then with remove your data and handover a copy to you (Encrypted)</p><br>
+                <p><span style="font-weight: 600;">New QRCode Preview</span><br><br>Note : we use data collection
+                    policies under some condition's, if you want to delete your data with us you can just make a simple
+                    request in our main website,and then with remove your data and handover a copy to you (Encrypted)
+                </p><br>
                 <hr class="button_hr"><br>
                 <div class="status">
-                <div class="qr_img">
-                    <img id="myImage" src="logo/spws.png" alt="QR Image" srcset="">
-                    <button id="downloadButton" type="download" class="download">Download The QRCode</button>
-                </div>
-                <div class="stat">
-                    <ul>
-                        <li>from the php database set limit of max 20MB of alloted space</li><br>
-                        <li>the user only upload pdf type files</li><br>
-                        <li>show status for how much space left</li><br>
-                        <li>show the count fo how many QRCode's are Generated</li><br>
-                    </ul>
-                </div>
+                    <div class="qr_img">
+                        <img id="myImage" src="logo/spws.png" alt="QR Image" srcset="">
+                        <button id="downloadButton" type="download" class="download">Download The QRCode</button>
+                    </div>
+                    <div class="stat">
+                        <ul>
+                            <li>from the php database set limit of max 20MB of alloted space</li><br>
+                            <li>the user only upload pdf type files</li><br>
+                            <li>show status for how much space left</li><br>
+                            <li>show the count fo how many QRCode's are Generated</li><br>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </main>
         <div class="advertisement">
             <!-- place for google bottom banner ad -->
-            <p>Weaning for advertisement and sponsor image or Text,  if you intrusted clink hear</p>
+            <p>Weaning for advertisement and sponsor image or Text, if you intrusted clink hear</p>
         </div>
     </section>
-</body> 
+</body>

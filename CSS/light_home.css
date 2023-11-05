@@ -1,27 +1,68 @@
-.light-theme .nav_devider{
-    
-}
-.light-theme .menu_devider{
+.light-theme .menu_devider {
     background-color: black;
     border: 2px solid black;
 
 }
-.light-theme .logo>img{
+
+.light-theme .logo>img {
     border: 2px dashed green;
 }
-.light-theme .profile_text ul li a{
+
+.light-theme .profile_text ul li a {
     border: 1px solid black;
 }
+
 .light-theme .nav_bar>ul li a {
     border: 1px solid black;
 }
-.light-theme .button_hr{
+
+.light-theme .button_hr {
     color: black;
     border: 2px solid black;
 }
-.light-theme button{
+
+.light-theme button {
     border: 1px solid black;
 }
-.light-theme .advertisement{
+
+.light-theme .advertisement {
     border: 2px solid black;
+}
+
+/* 
+Beta Notice style
+*/
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 80%;
+    margin: 100px auto;
+    padding: 20px;
+}
+.modal-content p{
+    color: red;
+}
+
+/* Styles for the button */
+.acknowledge-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
