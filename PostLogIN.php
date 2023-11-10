@@ -4,7 +4,7 @@ require 'config.php';
 require 'phpqrcode-2010100721_1.1.4/phpqrcode/qrlib.php';
 
 // Check if the session token is not present
-if (!isset($_SESSION['token'])) {
+if (!isset($_SESSION['SPWSTestSession'])) {
     header("Location: free.php");
     exit();
 }
