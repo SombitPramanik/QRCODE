@@ -1,14 +1,5 @@
 <?php
 session_start();
-
-// Check if the session token is not set
-if (!isset($_SESSION['SPWSTestSession'])) {
-    // Generate a unique token (you can use more secure methods)
-    $token = 'SPWSTestSession';
-
-    // Store the token in the session
-    $_SESSION['SPWSTestSession'] = $token;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +35,7 @@ if (!isset($_SESSION['SPWSTestSession'])) {
 
         // Display a custom alert message with countdown
         let countdown = 10;
-        alertDiv.innerHTML = `You are seeing this because we are building the login page. Redirecting in ${countdown} seconds...`;
+        alertDiv.innerHTML = `You are seeing this because we are building the login page. <b><i>This is the Free to use Limited Functional Page</i></b> Redirecting in ${countdown} seconds...<br> if you want to see Post login page click <a target="_blank" href="http://localhost/qrcode/PostLogIN.php">Hear</a><br>`;
 
         // Append the alert div to the body
         document.body.appendChild(alertDiv);
@@ -52,11 +43,11 @@ if (!isset($_SESSION['SPWSTestSession'])) {
         // Countdown and redirect
         const countdownInterval = setInterval(function () {
             countdown--;
-            alertDiv.innerHTML = `You are seeing this because we are building the login page. Redirecting in ${countdown} seconds...`;
+            alertDiv.innerHTML = `You are seeing this because we are building the login page. <b><i>This is the Free to use Limited Functional Page</i></b> Redirecting in ${countdown} seconds...<br> if you want to see Post login page click <a target="_blank" href="http://localhost/qrcode/PostLogIN.php">Hear</a><br>`;
 
             if (countdown === 0) {
                 clearInterval(countdownInterval);
-                window.location.href = "PostLogIN.php";
+                window.location.href = "free.php";
             }
         }, 1000);
     </script>
