@@ -8,5 +8,5 @@ downloadButton.addEventListener('click', () => {
   a.style.display = 'none'; // Hide the anchor element
   document.body.appendChild(a);
   a.click(); // Trigger a click event on the anchor element
-  document.body.removeChild(a); // Clean up the anchor element
+  document.body.removeChild(a);
 });

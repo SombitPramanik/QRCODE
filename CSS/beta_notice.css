@@ -1,0 +1,38 @@
+
+/* 
+Beta Notice style
+*/
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 80%;
+    margin: 100px auto;
+    padding: 20px;
+}
+.modal-content p{
+    color: red;
+}
+
+/* Styles for the button */
+.acknowledge-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -34,7 +34,7 @@ function toggleElements(elements) {
   for (const element of elements) {
     if (element.style.display === 'none' || element.style.display === '') {
       element.style.display = 'block';
-      console.log(element);
+      // console.log(element); // For Only if the product under testing 
 
     } else {
       element.style.display = 'none';
