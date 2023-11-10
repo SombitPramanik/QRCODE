@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Check if the session token is not set
+if (!isset($_SESSION['spws_session_token'])) {
+    // Generate a unique token (you can use more secure methods)
+    $token = bin2hex(random_bytes(32));
+
+    // Store the token in the session
+    $_SESSION['spws_session_token'] = $token;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
