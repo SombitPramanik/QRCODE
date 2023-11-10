@@ -14,7 +14,7 @@
 <body id="theme-switcher" class="light-theme">
 
     <!-- Your page content goes here -->
-    <script src="Js/theme.js"></script>
+    <script src="JS/theme.js"></script>
     <script>
         // Create a div for the alert
         const alertDiv = document.createElement('div');
