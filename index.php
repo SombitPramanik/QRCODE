@@ -213,7 +213,7 @@ require 'phpqrcode-2010100721_1.1.4/phpqrcode/qrlib.php';
                             </li><br>
                             <li>
                                 <b><span>Q. Can I Customize The Code ?</span></b><br>
-                                <i><span><b>Answer: </b>Sorry ! :( Now we can't support this, if Your are a PHP
+                                <i><span><b>Answer: </b>Sorry ! : Now we can't support this, if Your are a PHP
                                         Developer then Visit the carer Page for our Help.</span></i>
                             </li><br>
                         </ol>
@@ -237,7 +237,7 @@ require 'phpqrcode-2010100721_1.1.4/phpqrcode/qrlib.php';
                             </li><br>
                             <li>
                                 <b><span>Q. Can I Customize The Code ?</span></b><br>
-                                <i><span><b>Answer: </b>Sorry ! :( Now we can't support this, if Your are a PHP
+                                <i><span><b>Answer: </b>Sorry ! : Now we can't support this, if Your are a PHP
                                         Developer then Visit the carer Page for our Help.</span></i>
                             </li><br>
                         </ol>
@@ -288,7 +288,7 @@ require 'phpqrcode-2010100721_1.1.4/phpqrcode/qrlib.php';
                             </li><br>
                             <li>
                                 <b><span>Q. Can I Customize The Code ?</span></b><br>
-                                <i><span><b>Answer: </b>Sorry ! :( Now we can't support this, if Your are a PHP
+                                <i><span><b>Answer: </b>Sorry ! : Now we can't support this, if Your are a PHP
                                         Developer then Visit the carer Page for our Help.</span></i>
                             </li><br>
                         </ol>
@@ -320,7 +320,7 @@ require 'phpqrcode-2010100721_1.1.4/phpqrcode/qrlib.php';
                             </li><br>
                             <li>
                                 <b><span>Q. Can I Customize The Code ?</span></b><br>
-                                <i><span><b>Answer: </b>Sorry ! :( Now we can't support this, if Your are a PHP
+                                <i><span><b>Answer: </b>Sorry ! : Now we can't support this, if Your are a PHP
                                         Developer then Visit the carer Page for our Help.</span></i>
                             </li><br>
                         </ol>
