@@ -1,0 +1,45 @@
+.pricing-content h1 {
+    text-align: center;
+}
+
+.price_container {
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.pricing-plan {
+    /* border: 2px solid red; */
+    width: 33%;
+}
+
+.pricing-plan h2 {
+    text-align: center;
+}
+
+.pricing-plan table {
+    width: 80%;
+    margin: 5px 50%;
+    transform: translateX(-50%);
+    border-collapse: collapse;
+    text-transform: capitalize;
+    text-align: center;
+    background: linear-gradient(45deg, rgba(52, 43, 226, 0.5) 0%, rgba(55, 213, 234, 0.5) 100%);
+    border-radius: 10px;
+}
+
+.pricing-plan table:hover {
+    background: linear-gradient(45deg, rgba(55, 213, 234, 0.5) 0%, rgba(52, 43, 226, 0.5) 100%);
+}
+
+.pricing-plan button {
+    margin: 10px 50%;
+    transform: translateX(-50%);
+}
+
+.pricing-plan table td,
+th {
+    padding: 8px;
+}
