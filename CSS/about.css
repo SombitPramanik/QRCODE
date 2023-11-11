@@ -1,0 +1,22 @@
+.about-content h1{
+    text-align: center;
+
+}
+.main_contaient{
+    display: flex;
+    height: 75%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.q{
+    border: 2px dashed green;
+    border-radius: 10px;
+    margin: 5px;
+    flex: 1 0 33%;
+    padding: 10px;
+
+}
+.q i{
+    text-align: center;
+    margin: 20px 0; 
+}
