@@ -1,5 +1,5 @@
 /* Common Layout for all POP-UP */
-.help-layout,.about-layout,.pricing-layout{
+.help-layout,.about-layout,.pricing-layout,.tnc-layout{
     display: none;
     position: fixed;
     background-color: rgba(0, 0, 0, .8);
@@ -8,7 +8,7 @@
     width: 100vw;
     height: 100vh;
 }
-.help-content,.about-content,.pricing-content{
+.help-content,.about-content,.pricing-content,.tnc-content{
     text-align: left;
     background-color: var(--dark-background-color);
     height: 80vh;

@@ -1,6 +1,6 @@
 window.onload = function() {
-    const modal = document.getElementById('modal');
-    const acknowledgeButton = document.getElementById('acknowledge');
+    const modal = document.getElementById('tncLayout');
+    const acknowledgeButton = document.getElementById('closeTnc');
 
     acknowledgeButton.onclick = function() {
       modal.style.display = 'none';

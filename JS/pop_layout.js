@@ -8,6 +8,9 @@ document.getElementById('pricing').addEventListener('click', function () {
 document.getElementById('about').addEventListener('click', function () {
     document.getElementById('aboutLayout').style.display = 'block';
 });
+document.getElementById('tnc').addEventListener('click', function () {
+    document.getElementById('tncLayout').style.display = 'block';
+});
 // Function to close the layout
 document.getElementById('closeHelp').addEventListener('click', function () {
     document.getElementById('helpLayout').style.display = 'none';
@@ -17,4 +20,7 @@ document.getElementById('closePricing').addEventListener('click', function () {
 });
 document.getElementById('closeAbout').addEventListener('click', function () {
     document.getElementById('aboutLayout').style.display = 'none';
+});
+document.getElementById('closeTnc').addEventListener('click', function () {
+    document.getElementById('tncLayout').style.display = 'none';
 });

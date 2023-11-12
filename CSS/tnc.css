@@ -1,0 +1,24 @@
+.tnc-content{
+    padding: 10px 20px;
+    text-align: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}.tnc-content>p,ol{
+    width: 80%;
+    text-align: left;
+    margin: 2px 50%;
+    transform: translateX(-50%);
+}
+.tnc-content h3,h2,h1{
+    text-align: center;
+    margin: 10px 5px;
+}
+.tnc-content ol li{
+    list-style-type:decimal;
+}
+.tnc-content button{
+    position: relative;
+    bottom: 0;
+    margin: 10px 50%;
+    transform: translateX(-50%);
+}
