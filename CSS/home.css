@@ -96,6 +96,7 @@ body {
 
 .nav_bar>ul li {
     margin: 10%;
+    transition: transform 0.2s;
 }
 
 .nav_bar>ul li a {
@@ -103,7 +104,12 @@ body {
     border: 1px solid white;
     border-radius: 5px;
 }
-
+.nav_bar>ul li:hover{
+    transform: scale(1.1);
+}
+.nav_bar>ul li a:hover{
+    box-shadow: 2px 5px 5px 0px var(--dark-accent-color1);
+}
 /* Right MEnu Staring from Hear */
 .top_brand {
     background-color: green;
