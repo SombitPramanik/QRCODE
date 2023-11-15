@@ -8,7 +8,7 @@ document.getElementById('pricing').addEventListener('click', function () {
 document.getElementById('about').addEventListener('click', function () {
     document.getElementById('aboutLayout').style.display = 'block';
 });
-document.getElementById('tnc').addEventListener('click', function () {
+document.getElementById('tncLayout').addEventListener('click', function () {
     document.getElementById('tncLayout').style.display = 'block';
 });
 // Function to close the layout
