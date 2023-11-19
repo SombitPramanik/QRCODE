@@ -21,6 +21,3 @@ document.getElementById('closePricing').addEventListener('click', function () {
 document.getElementById('closeAbout').addEventListener('click', function () {
     document.getElementById('aboutLayout').style.display = 'none';
 });
-document.getElementById('closeTnc').addEventListener('click', function () {
-    document.getElementById('tncLayout').style.display = 'none';
-});

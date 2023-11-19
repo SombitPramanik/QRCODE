@@ -145,6 +145,9 @@ main {
     width: 45%;
 
 }
+input::placeholder{
+    text-transform: capitalize;
+}
 .for_upi{
     display: block;
 }
