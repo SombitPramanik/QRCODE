@@ -1,28 +1,33 @@
-const myFormElements = document.getElementsByClassName('myForm');
-const myImage = document.getElementById('myImage');
+// Function to update image source with a delay
+function updateImageSourceWithDelay(imageId, imagePath, delay) {
+    setTimeout(function () {
+        var myImage = document.getElementById(imageId);
+        if (myImage) {
+            myImage.removeAttribute('src');
+            myImage.src = imagePath;
+            console.log('Image Source updated successfully');
+        }
+    }, delay);
+}
 
+// Get all elements with the class 'CreateQR'
+var createQrElements = document.getElementsByClassName('CreateQr');
 
-for (const form of myFormElements) {
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent the default form submission behavior
+// Add event listener to each element
+for (var i = 0; i < createQrElements.length; i++) {
+    createQrElements[i].addEventListener('click', function () {
+        // Get the value of the 'data-from-valid' attribute
+        var data = this.getAttribute('from-valid');
 
-        const clickedButton = document.activeElement; // Get the button that was clicked
-
-        if (clickedButton && clickedButton.classList.contains('CreateQr')) {
-            // Do something based on which button was clicked
-            // console.log('Button with text:', clickedButton.textContent, 'was clicked.'); // Only if the Product under Testing
-
-            // Add your AJAX fetch request here
-            fetch('') // Replace 'your-data-endpoint-url' with the actual URL
-                .then(response => response.text())
-                .then(data => {
-                    // Update the result div with the fetched data
-                    myImage.innerHTML = data;
-                    // console.log('Source updated from PHP success on generate button click'); //Only if the Product under Testing
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+        // Check the value of 'data' and perform actions accordingly with a 2-second delay
+        if (data === "&text_submit=1") {
+            updateImageSourceWithDelay('myImage', 'qr_img/Free/FreeQrcodeBySPP_TechnologiesTEXT.png', 2000);
+        } else if (data === "&wifi_submit=1") {
+            updateImageSourceWithDelay('myImage', 'qr_img/Free/FreeQrcodeBySPP_TechnologiesWIFI.png', 2000);
+        } else if (data === "&url_submit=1") {
+            updateImageSourceWithDelay('myImage', 'qr_img/Free/FreeQrcodeBySPP_TechnologiesURL.png', 2000);
+        } else if (data === "&upi_submit=1") {
+            updateImageSourceWithDelay('myImage', 'qr_img/Free/FreeQrcodeBySPP_TechnologiesUPI.png', 2000);
         }
     });
 }

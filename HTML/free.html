@@ -1,3 +1,23 @@
+<?php
+var_dump($_POST);
+if (isset($_POST["upi_submit"])) {
+    $upi_id = $_POST["upi_id"];
+    $f_name = $_POST["upi_first_name"];
+    $l_name = $_POST["upi_last_name"];
+    $amount = $_POST["upi_amount"];
+    $user_name = $f_name . $l_name;
+    echo 'Form Received Successfully';
+
+    $qr_data = "upi://pay?pa=" . ($upi_id) . "&pn=" . ($f_name) . "%20" . ($l_name) . "&mc=0000&tn=&am=" . ($amount) . "&cu=INR&tn=";
+
+    // Generate QR code and display it
+    QRcode::png($qr_data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);
+
+    // $query = "INSERT INTO users VALUES ('$user_name','$link')";
+    // mysqli_query($conn, $query);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,8 +100,8 @@
                     <h2>advance help</h2>
                     <p>Only accessible after login</p><br>
                     <button>
-                        <li><a target="_blank" class="nav_links"
-                                href="https://theqrcode.site/PostLogIN.php">login</a></li>
+                        <li><a target="_blank" class="nav_links" href="https://theqrcode.site/PostLogIN.php">login</a>
+                        </li>
                     </button>
                     <!-- <p>Q1. Did you Find the on call or Whatsapp Support ?</p><br>
                     <p class="call_wp_btn">
@@ -152,10 +172,10 @@
             <button id="closeAbout" class="about-button">Close About</button>
         </div>
     </section>
-    <section id="/Layout" class="tnc-layout">
+    <section id="tncLayout" class="tnc-layout">
         <div class="tnc-content">
             <p>
-                <h1>Scroll Down To use The Website</h1>
+            <h1>Scroll Down To use The Website</h1>
             <h2>Terms of Use</h2>
             <p>Last Updated: 12/11/2023</p>
             <p>
@@ -410,8 +430,7 @@
                     <li><a href="#" id="tnc" class="nav_links">Terms of use</a></li>
                     <li><a href="#" id="pricing" class="nav_links">Pricing</a></li>
                     <li><a href="#" id="about" class="nav_links">about</a></li>
-                    <li><a href="https://theqrcode.site/PostLogIN.php" target="_blank"
-                            class="nav_links">login</a></li>
+                    <li><a href="https://theqrcode.site/PostLogIN.php" target="_blank" class="nav_links">login</a></li>
                 </ul>
             </div>
         </nav>
@@ -445,15 +464,16 @@
                             <label for="upi_id">Enter Receiver UPI ID</label>
                             <input type="text" name="upi_id" id="upi_id" placeholder="Example : 6297037940@ybl"><br>
                             <label for="upi_first_name">Enter Receiver First Name</label>
-                            <input type="text" name="upi_first_name" id="upi_first_name" placeholder="Example : sombit">
+                            <input type="text" name="upi_first_name" id="upi_first_name" placeholder="Example : Sombit">
                             <br>
-                            <label for="upi_lase_name">Enter Receiver Last Name</label>
-                            <input type="text" name="upi_lase_name" id="upi_lase_name"
-                                placeholder="Example : pramanik"><br>
+                            <label for="upi_last_name">Enter Receiver Last Name</label>
+                            <input type="text" name="upi_last_name" id="upi_last_name"
+                                placeholder="Example : Pramanik"><br>
                             <label for="upi_amount">Enter Amount</label>
                             <input type="text" name="upi_amount" id="upi_amount" placeholder="Example : 101"><br>
-                            <button type="submit" class="CreateQr">Create QR</button>
-                        </form><br>
+                            <button type="submit" name="upi_submit" class="CreateQr">Create QR</button>
+                        </form>
+                        <br>
                         <p>
                         <ol>
                             <li>
@@ -608,5 +628,7 @@
 <script src="JS/beta_notice.js"></script>
 <script src="JS/pop_layout.js"></script>
 <script src="JS/auto_fetch.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="JS/from_send_ajax.js"></script>
 
 </html>
