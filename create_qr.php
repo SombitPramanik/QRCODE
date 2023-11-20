@@ -12,10 +12,11 @@ if (isset($_POST['upi_submit'])) {
     $f_name = $_POST['upi_first_name'];
     $l_name = $_POST['upi_last_name'];
     $amount = $_POST['upi_amount'];
+    $filename = $_POST['filename'];
     $user_name = $f_name . $l_name;
 
     $qr_data = "upi://pay?pa=" . ($upi_id) . "&pn=" . ($f_name) . "%20" . ($l_name) . "&mc=0000&tn=&am=" . ($amount) . "&cu=INR&tn=";
-    $qrCodeFileName = "qr_img/Free/FreeQrcodeBySPP_TechnologiesUPI.png";
+    $qrCodeFileName = "qr_img/Free/$filename.png";
 
     // Generate QR code and display it
     QRcode::png($qr_data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);
@@ -32,8 +33,9 @@ if (isset($_POST['upi_submit'])) {
     // Encode the response as JSON and print it
     echo json_encode($response);
 }elseif (isset($_POST['text_submit'])) {
-    $qr_data = $_POST['text'];    
-    $qrCodeFileName = "qr_img/Free/FreeQrcodeBySPP_TechnologiesTEXT.png";
+    $qr_data = $_POST['text'];
+    $filename = $_POST['filename'];    
+    $qrCodeFileName = "qr_img/Free/$filename.png";
 
     // Generate QR code and display it
     QRcode::png($qr_data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);
@@ -43,8 +45,9 @@ if (isset($_POST['upi_submit'])) {
     echo json_encode($response);
 
 }elseif (isset($_POST['url_submit'])) {
-    $qr_data = $_POST['url'];    
-    $qrCodeFileName = "qr_img/Free/FreeQrcodeBySPP_TechnologiesURL.png";
+    $qr_data = $_POST['url'];
+    $filename = $_POST['filename'];    
+    $qrCodeFileName = "qr_img/Free/$filename.png";
 
     // Generate QR code and display it
     QRcode::png($qr_data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);
@@ -55,8 +58,9 @@ if (isset($_POST['upi_submit'])) {
     echo json_encode($response);
 
 }elseif (isset($_POST['wifi_submit'])) {
-    $qr_data = $_POST['ssid'];    
-    $qrCodeFileName = "qr_img/Free/FreeQrcodeBySPP_TechnologiesWIFI.png";
+    $qr_data = $_POST['ssid'];
+    $filename = $_POST['filename'];    
+    $qrCodeFileName = "qr_img/Free/$filename.png";
 
     // Generate QR code and display it
     QRcode::png($qr_data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);

@@ -10,6 +10,31 @@ function updateImageSourceWithDelay(imageId, imagePath, delay) {
     }, delay);
 }
 
+// Function to check if the image has loaded, and if not, request a reload
+function checkImageLoaded(imageId, imagePath, retryCount, retryInterval) {
+    var image = document.getElementById(imageId);
+
+    // Check if the image has loaded successfully
+    if (image && image.complete && image.naturalWidth !== 0) {
+        console.log('Image loaded successfully');
+    } else {
+        // Retry loading the image after a specified interval
+        setTimeout(function () {
+            // Make an additional request to reload the image
+            updateImageSourceWithDelay(imageId, imagePath, 0);
+        }, retryInterval);
+
+        // Retry for a specified number of times
+        if (retryCount > 0) {
+            setTimeout(function () {
+                checkImageLoaded(imageId, imagePath, retryCount - 1, retryInterval);
+            }, retryInterval);
+        } else {
+            console.error('Failed to load image after retrying');
+        }
+    }
+}
+
 // Get all elements with the class 'CreateQR'
 var createQrElements = document.getElementsByClassName('CreateQr');
 
@@ -19,15 +44,29 @@ for (var i = 0; i < createQrElements.length; i++) {
         // Get the value of the 'data-from-valid' attribute
         var data = this.getAttribute('from-valid');
 
+        // Get the unique code from local storage
+        var filename = localStorage.getItem('filename');
+
         // Check the value of 'data' and perform actions accordingly with a 2-second delay
         if (data === "&text_submit=1") {
-            updateImageSourceWithDelay('myImage', 'qr_img/Free/FreeQrcodeBySPP_TechnologiesTEXT.png', 2000);
+            updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
+            // Check if the image has loaded, and retry if necessary
+            checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
         } else if (data === "&wifi_submit=1") {
-            updateImageSourceWithDelay('myImage', 'qr_img/Free/FreeQrcodeBySPP_TechnologiesWIFI.png', 2000);
+            updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
+            // Check if the image has loaded, and retry if necessary
+            checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
         } else if (data === "&url_submit=1") {
-            updateImageSourceWithDelay('myImage', 'qr_img/Free/FreeQrcodeBySPP_TechnologiesURL.png', 2000);
+            updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
+            // Check if the image has loaded, and retry if necessary
+            checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
         } else if (data === "&upi_submit=1") {
-            updateImageSourceWithDelay('myImage', 'qr_img/Free/FreeQrcodeBySPP_TechnologiesUPI.png', 2000);
+            updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
+            // Check if the image has loaded, and retry if necessary
+            checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
         }
+
+        // Remove the unique code from local storage
+        localStorage.removeItem('filename');
     });
 }
