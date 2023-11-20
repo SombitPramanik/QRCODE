@@ -41,32 +41,36 @@ var createQrElements = document.getElementsByClassName('CreateQr');
 // Add event listener to each element
 for (var i = 0; i < createQrElements.length; i++) {
     createQrElements[i].addEventListener('click', function () {
-        // Get the value of the 'data-from-valid' attribute
+        // Introduce a 1-second delay to retrieve the filename from local storage
         var data = this.getAttribute('from-valid');
+        setTimeout(function () {
+            // Get the filename from local storage
+            var filename = localStorage.getItem('filename');
 
-        // Get the unique code from local storage
-        var filename = localStorage.getItem('filename');
+            // Get the value of the 'data-from-valid' attribute
 
-        // Check the value of 'data' and perform actions accordingly with a 2-second delay
-        if (data === "&text_submit=1") {
-            updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
-            // Check if the image has loaded, and retry if necessary
-            checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
-        } else if (data === "&wifi_submit=1") {
-            updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
-            // Check if the image has loaded, and retry if necessary
-            checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
-        } else if (data === "&url_submit=1") {
-            updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
-            // Check if the image has loaded, and retry if necessary
-            checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
-        } else if (data === "&upi_submit=1") {
-            updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
-            // Check if the image has loaded, and retry if necessary
-            checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
-        }
 
-        // Remove the unique code from local storage
-        localStorage.removeItem('filename');
+            // Check the value of 'data' and perform actions accordingly with a 2-second delay
+            if (data === "&text_submit=1") {
+                updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
+                // Check if the image has loaded, and retry if necessary
+                checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
+            } else if (data === "&wifi_submit=1") {
+                updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
+                // Check if the image has loaded, and retry if necessary
+                checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
+            } else if (data === "&url_submit=1") {
+                updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
+                // Check if the image has loaded, and retry if necessary
+                checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
+            } else if (data === "&upi_submit=1") {
+                updateImageSourceWithDelay('myImage', 'qr_img/Free/' + filename + '.png', 1000);
+                // Check if the image has loaded, and retry if necessary
+                checkImageLoaded('myImage', 'qr_img/Free/' + filename + '.png', 3, 1000);
+            }
+
+            // Remove the unique code from local storage
+            localStorage.removeItem('filename');
+        }, 500); // 1-second delay
     });
 }

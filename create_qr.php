@@ -21,15 +21,10 @@ if (isset($_POST['upi_submit'])) {
     // Generate QR code and display it
     QRcode::png($qr_data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);
 
-    // Your database or other processing code goes here
-
     // Set the response status and message
     $response['status'] = 'success';
     $response['message'] = 'Form received successfully. QR code generated.';
-
-    // You may also want to include additional data in the response
-    // $response['additional_data'] = 'Some additional information';
-
+    // $response['message'] = $_POST; # This is for the debugging to see the send data over POST Request's
     // Encode the response as JSON and print it
     echo json_encode($response);
 }elseif (isset($_POST['text_submit'])) {
