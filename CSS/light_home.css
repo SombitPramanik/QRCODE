@@ -43,6 +43,9 @@
 .light-theme .pricing-content{
     background-color: var(--light-background-color);
 }
+.light-theme .tnc-content{
+    background-color: var(--light-background-color);
+}
 .light-theme .input_from input{
     color: black;
 }
