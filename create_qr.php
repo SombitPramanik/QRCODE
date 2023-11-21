@@ -56,19 +56,20 @@ if (isset($_POST['upi_submit'])) {
     $ssid = $_POST['ssid'];
     $password = $_POST['password'];
     $auth_type = $_POST['encrypt'];
-    $hidden_ssid = 'false';
+    $hidden_ssid = $_POST['net_typ'];
+    // $hidden_ssid = 'false';
     
 
-    $qr_data = "wifi:S:$ssid;T:$auth_type;P:$password;H:$hidden_ssid;;";
+    $qr_data = "WIFI:S:$ssid;T:$auth_type;P:$password;H:$hidden_ssid;;";
     $filename = $_POST['filename'];    
     $qrCodeFileName = "qr_img/Free/$filename.png";
 
     // Generate QR code and display it
-    QRcode::png($qr_data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);
+    QRcode::png($qr_data, $qrCodeFileName, QR_ECLEVEL_L, 10, 4);
     
     // Set the response status and message
     $response['status'] = 'success';
-    $response['message'] = 'Form received successfully. QR code generated.';
+    $response['message'] = $qr_data;
     echo json_encode($response);
 
 }else {

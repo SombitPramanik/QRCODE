@@ -213,18 +213,20 @@ button{
 }
 select{
     text-transform: uppercase;
-    width: 60px;
+    width: 80px;
     border-radius: 2px;
     border: 2px dashed gray;
     color: green;
     height: 30px;
     background-color: transparent;
     font-weight: bold;
+    margin: 10px 5px;
 }
 option{
     color: red;
     background: transparent !important;
     font-weight: bold;
+    background: transparent;
 }
 .output_hr{
     border: 2px solid white;
