@@ -53,7 +53,13 @@ if (isset($_POST['upi_submit'])) {
     echo json_encode($response);
 
 }elseif (isset($_POST['wifi_submit'])) {
-    $qr_data = $_POST['ssid'];
+    $ssid = $_POST['ssid'];
+    $password = $_POST['password'];
+    $auth_type = $_POST['encrypt'];
+    $hidden_ssid = 'false';
+    
+
+    $qr_data = "wifi:S:$ssid;T:$auth_type;P:$password;H:$hidden_ssid;;";
     $filename = $_POST['filename'];    
     $qrCodeFileName = "qr_img/Free/$filename.png";
 
