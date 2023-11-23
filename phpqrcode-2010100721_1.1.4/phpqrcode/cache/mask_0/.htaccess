@@ -4,4 +4,4 @@ Options -Indexes
 # Redirect users trying to access directories to index.php
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^(.*)$ /index.php [L]
+RewriteRule ^(.*)$ /404.html [L]

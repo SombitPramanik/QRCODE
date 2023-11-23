@@ -1,9 +1,7 @@
+# Prevent Users From Direct Access of the Directories 
 Options -Indexes
 
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-
-    # Redirect users trying to access directories to index.php
-    RewriteCond %{REQUEST_FILENAME} -d
-    RewriteRule ^(.*)$ /index.php [L]
-</IfModule>
+# Redirect users trying to access directories to index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*)$ /404.html [L]
