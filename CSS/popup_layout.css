@@ -1,5 +1,5 @@
 /* Common Layout for all POP-UP */
-.help-layout,.about-layout,.pricing-layout,.tnc-layout{
+.help-layout,.about-layout,.pricing-layout,.tnc-layout,.privacy-layout{
     display: none;
     position: fixed;
     background-color: rgba(0, 0, 0, .8);
@@ -8,7 +8,7 @@
     width: 100vw;
     height: 100vh;
 }
-.help-content,.about-content,.pricing-content,.tnc-content{
+.help-content,.about-content,.pricing-content,.tnc-content,.privacy-content{
     text-align: left;
     background-color: var(--dark-background-color);
     height: 80vh;
@@ -18,15 +18,16 @@
     border: 2px dashed green;
     padding: 20px;
     border-radius: 10px;
+    overflow: scroll;
 }
-.help-button,.about-button,.pricing-button{
-    margin: 5% 50%;
-    transform: translate( -50%);
-    padding: 0;
+.help-button,.about-button,.pricing-button,.privacy-button{
+    position: relative;
+    margin: 5% 2%;
+    padding: 5px;
     text-align: center;
     bottom: 0;
+    
 }
-
 .basic,.common,.advance{
     /* border: 2px dashed red; */
     width: 30%;

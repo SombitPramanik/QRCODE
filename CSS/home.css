@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
-
 body {
     display: flex;
-    width: 98vw;
-    height: 150vh;
+    width: 100%;
     font-family: 'Ubuntu Mono', monospace;
 
 }
@@ -23,16 +20,13 @@ body {
 
 .left_menu,
 .right_menu {
-    height: 100vh;
-    /* border: 1px solid white; */
-    /* margin: top right bottom left; */
     margin: 0 1vw 0 1vw;
 
 }
 
 .menu_devider {
     width: .2em;
-    height: 80vh;
+    /* height: 80vh; */
     margin: 10vh 0 0 0;
     background-color: white;
     /* transform: translateY(-50%);  */
@@ -59,7 +53,7 @@ body {
 }
 
 .profile_text ul li {
-    margin: 10%;
+    margin: 5px 10%;
     font-size: 16px;
     transition: transform 0.2s;
 
@@ -69,6 +63,7 @@ body {
     padding: 10px;
     border: 1px solid white;
     border-radius: 5px;
+    display: block;
 }
 
 .profile_text ul li a:hover {
@@ -96,14 +91,16 @@ body {
 }
 
 .nav_bar>ul li {
-    margin: 10%;
+    margin: 5px 10%;
     transition: transform 0.2s;
+    width: fit-content;
 }
 
 .nav_bar>ul li a {
     padding: 10px;
     border: 1px solid white;
     border-radius: 5px;
+    display: block;
 }
 .nav_bar>ul li:hover{
     transform: scale(1.1);
@@ -117,7 +114,7 @@ body {
     display: flex;
     width: 100%;
     /* border: 2px solid red; */
-    height: 10vh;
+    height: 100px;
     border-radius: 10px;
     justify-items: center;
     align-items: center;
@@ -169,7 +166,9 @@ input::placeholder{
     border: 2px dashed gray;
     margin: 2%;
 }
-
+.input_fields ul li a{
+    display: block;
+}
 .input_from {
     text-align: left;
     padding: 1vh 2vw;
@@ -177,12 +176,12 @@ input::placeholder{
 
 .input_from input {
     background-color: transparent;
-    height: 4vh;
+    height: 25px;
     border: 2px dashed gray;
-    margin: 1vh;
+    margin: 10px;
     color: white;
     transition: border 1s;
-    width: 15vw;
+    width: 50%;
     padding: 0 10px;
 
 }
@@ -196,7 +195,7 @@ input::placeholder{
 }
 button{
     width: 8vw;
-    height: 4vh;
+    height: 30px;
     border: 1px solid white;
     color: whitesmoke;
     background-color: green;
@@ -232,6 +231,7 @@ option{
 .output_hr{
     border: 2px solid white;
     border-radius: 100%;
+    height: 80vh;
 }
 .output_fields {
     /* border: 2px solid white; */
@@ -239,48 +239,52 @@ option{
     width: 54%;
     padding: 10px 20px;
 }
+
+.status{
+    justify-content: space-evenly;
+    width: 100%;
+    display: flex;
+
+}
 .qr_img{
-    /* border: 2px solid red; */
-    width: 250px;
-    /* height: 250px; */
+    width: 48%;
 }
 .qr_img>img{
-    width: 250px;
-    height: 250px;
+    margin: 2% 50%;
+    transform: translate(-50%);
+    width: 15vw;
+    height: 25vh;
     border: 2px solid gray;
     border-radius: 5px;
 }
 .download{
     margin: 2% 50%;
-    transform: translateX(-50%);
-    width: 200px;
+    transform: translate(-50%);
 }
-.status{
-    justify-content: space-evenly;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    /* border: 2px solid white; */
 
+@media screen and (min-width: 950px) {
+    .download{
+        margin: 2% 50%;
+        transform: translate(-50%);
+        width: 15vw;
+    }
 }
+
+@media screen and (min-width: 700px) and (max-width: 949px) {
+    .download{
+        margin: 2% 50%;
+        transform: translate(-50%);
+        width: 15vw;
+        height: 40px;
+    }
+}
+
+
 .stat{
-    padding: 0 25px;
-    width: 55%;
+    padding: 5px;
+    width: 50%;
     /* border: 2px solid yellow; */
 }
 .stat ul li{
-    list-style-type: disc;
-}
-
-.advertisement {
-    /* display: none; */
-    margin: 2vh 0 0 0;
-    height: 10vh;
-    width: 100%;
-    border: 2px solid white;
-    border-radius: 10px;
-}
-.advertisement>p{
-    margin: 2%;
-    /* transform: translate(-100%); */
+    list-style-type: none;
 }

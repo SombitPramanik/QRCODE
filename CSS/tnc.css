@@ -4,7 +4,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
 }.tnc-content>p,ol{
-    width: 80%;
+    width: 100%;
     text-align: left;
     margin: 2px 50%;
     transform: translateX(-50%);
