@@ -1,6 +1,5 @@
 <?php
-session_start();
-$conn = mysqli_connect("localhost", "root", "", "qrcode");
+require 'config.php';
 
 // Check connection
 if (!$conn) {
