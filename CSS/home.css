@@ -3,9 +3,11 @@ body {
     width: 100%;
     font-family: 'Ubuntu Mono', monospace;
 
+
 }
 
 .left_menu {
+    display: flex;
     width: 18vw;
     text-transform: capitalize;
     padding: 2px;

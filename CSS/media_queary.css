@@ -1,0 +1,77 @@
+@media screen and (min-width:0px) and (max-width:760px) {
+    body {
+        flex-direction: column;
+
+    }
+
+    .left_menu,
+    .right_menu {
+        width: 100vw;
+        display: block;
+    }
+
+    .profile_text ul {
+        width: 100% !important;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .nav_devider,
+    .menu_devider,
+    .nav_bar,
+    .copy,
+    .output_hr,
+    .stat {
+        display: none;
+    }
+
+    .tag {
+        font-size: 1rem;
+    }
+
+    .top_brand {
+        width: 95vw;
+        height: 50px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .input_fields {
+        width: 100%;
+        height: auto;
+    }
+
+    .left_menu {
+        display: none;
+    }
+
+    .myForm {
+        height: max-content;
+    }
+
+    button {
+        width: auto;
+        padding: 2px 5px;
+    }
+
+    .output_fields {
+        flex-direction: column;
+        width: 95vw;
+        /* border: 2px solid red; */
+        display: flex;  
+        height: max-content;
+    }
+
+    .qr_img {
+        width: 100%;
+    }
+    .qr_img>img{
+        width: 25vh;
+    }
+    .main_down{
+        width: 80vw;
+
+    }
+}
