@@ -77,4 +77,32 @@
         width: 80vw;
 
     }
+    footer{
+        border-top: 2px dashed gray;
+        margin: 5px;
+        padding: 5px;
+    }
+    footer ol{
+        flex-wrap: wrap;
+        display: flex;
+
+    }
+    footer ol li{
+        justify-content: center;
+        margin: 5px;
+        text-align: center;
+        height: 30px;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+    footer ol li a{
+        text-align: center;
+        padding: 5px;        
+    }
+}
+@media screen and (min-width: 761px) {
+    footer{
+        display: none;
+    }
+    
 }
