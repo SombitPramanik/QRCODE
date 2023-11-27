@@ -7,7 +7,7 @@ body {
 }
 
 .left_menu {
-    display: flex;
+    /* display: flex; */
     width: 18vw;
     text-transform: capitalize;
     padding: 2px;
