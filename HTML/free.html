@@ -96,6 +96,7 @@
                 </div>
             </div>
             <button id="closeHelp" class="help-button">Close Help</button>
+            <button id="mobile_closeHelp" class="help-button" style="display: none;">Close Help</button>
         </div>
     </div>
     <section id="aboutLayout" class="about-layout">
@@ -152,6 +153,7 @@
                 </div>
             </div>
             <button id="closeAbout" class="about-button">Close About</button>
+            <button id="mobile_closeAbout" class="about-button" style="display: none;">Close About</button>
         </div>
     </section>
     <!-- <section id="tncLayout" class="tnc-layout">
@@ -280,6 +282,7 @@
             <br>
             </p>
             <button id="closeTnc" class="tnc-button">Close</button>
+            <button id="mobile_closeTnc" class="tnc-button" style="display: none;">Close</button>
             </p>
         </div>
     </section>
@@ -439,6 +442,7 @@
                 </div>
             </div>
             <button id="closePricing" class="pricing-button">Close</button>
+            <button id="mobile_closePricing" style="display: none;" class="pricing-button">Close</button>
         </div>
     </section>
     <section id="privacyLayout" class="privacy-layout" style="display: none;">
@@ -633,6 +637,7 @@
                 records.
             </p>
             <button id="closePrivacy" class="privacy-button">Close</button>
+            <button id="mobile_closePrivacy" style="display: none;" class="privacy-button">Close</button>
         </div>
     </section>
     <section id="contactLayout" class="contact-layout" style="display: none;">
@@ -903,12 +908,14 @@
     </section>
     <footer>
         <ol>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">privacy & Policies</a></li>
-            <li><a href="#">Disclaimer</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="#Privacy" id="mobile_privacy" class="nav_links">Privacy & policies</a></li>
+            <!-- <li><a href="#Terms" id="mobile_tnc" class="nav_links">Terms of user</a></li> -->
+            <li><a href="#Declaimer" id="mobile_tnc" class="nav_links">Declaimer</a></li>
+            <li><a href="#Pricing" id="mobile_pricing" class="nav_links">Pricing</a></li>
+            <li><a href="#Contact" id="mobile_contact" class="nav_links">contact</a></li>
+            <li><a href="PostLogIN.php" target="_blank" class="nav_links">login</a></li>
+            <li><a href="#Help" id="mobile_Help" class="p_links">help</a></li>
+            <li><a href="#About" id="mobile_about" class="nav_links">about</a></li>
         </ol>
         <p class="ft_copy">
             &copy; <i>SPP Technologies</i> 2023 all rights reserved <br><br>
@@ -925,5 +932,6 @@
 <script src="JS/pop_layout.js"></script>
 <script src="JS/from_send_ajax.js"></script>
 <script src="JS/auto_fetch.js"></script>
+<script src="JS/mobile_pop.js"></script>
 
 </html>
