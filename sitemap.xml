@@ -9,7 +9,38 @@
 
 <url>
   <loc>https://theqrcode.site/</loc>
-  <lastmod>2023-11-28T10:39:00+00:00</lastmod>
+  <lastmod>2023-11-29T05:53:40+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/Help.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/About.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/Privacy.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/Declaimer.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/Pricing.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/Contact.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
