@@ -164,11 +164,16 @@ input::placeholder{
 }
 
 .input_fields ul li {
-    padding: 1% 2%;
+    /* padding: 1% 2%; */
     border: 2px dashed gray;
     margin: 2%;
 }
 .input_fields ul li a{
+    justify-content: center;
+    margin-top: 8px;
+    text-align: center;
+    width: 45px;
+    height: 25px;
     display: block;
 }
 .input_from {
