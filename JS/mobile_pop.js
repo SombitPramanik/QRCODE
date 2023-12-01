@@ -13,8 +13,8 @@ document.getElementById('mobile_about').addEventListener('click', function () {
 });
 document.getElementById('mobile_tnc').addEventListener('click', function () {
     document.getElementById('tncLayout').style.display = 'block';
-    document.getElementById('CloseTnc').style.display = 'none';
-    document.getElementById('mobile_CloseTnc').style.display = 'block';
+
+
 });
 document.getElementById('mobile_pricing').addEventListener('click', function () {
     document.getElementById('pricingLayout').style.display = 'block';
