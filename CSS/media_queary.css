@@ -1,4 +1,4 @@
-@media screen and (min-width:0px) and (max-width:760px) {
+@media screen and (min-width:0px) and (max-width:800px) {
     * {
         overflow-x: hidden;
     }
@@ -121,5 +121,18 @@
     footer {
         display: none;
     }
+    .stat{
+        display: none;
+    }
+    *{
+        overflow-x: hidden;
+    }
 
+
+}
+@media screen and (min-width: 769px) and (max-width:1025px) {
+    .qr_img>img{
+        width: 20vw;
+        height: 25vh;
+    }
 }
