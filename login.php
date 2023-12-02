@@ -2,21 +2,56 @@
 session_start();
 
 // Check if the session token is not present
-if (!isset($_SESSION['SPWSTestSession'])) {
+if (!isset($_SESSION['unique_token'])) {
     if (isset($_POST["submit"])) {
         // Retrieve user input from $_POST
-        $username = $_POST["username"];
         $email = $_POST["email"];
-        $token = 'SPWSTestSession';
-        $_SESSION['SPWSTestSession'] = $token;
+        $password = $_POST["password"];
+
+        // Include your database connection configuration
+        require './config.php';
+
+        // Fetch the hashed password from the database based on the provided username/email
+        $query = "SELECT email, password FROM normal_user WHERE email = '$email'";
+        $result = mysqli_query($conn, $query);
+
+        if ($result) {
+            if (mysqli_num_rows($result) > 0) {
+                $row = mysqli_fetch_assoc($result);
+                $hashed_password = $row["password"];
+
+                // Verify the hashed password
+                if (password_verify($password, $hashed_password)) {
+                    // Generate a unique session token based on the hash of email and password
+                    $unique_token = substr(hash('sha256', $username . $password), 0, 30);
+                    $_SESSION['unique_token'] = $unique_token;
+
+                    // Check if the user is not already on the PostLogIN.php page before redirecting
+                    if (basename($_SERVER['PHP_SELF']) != 'PostLogIN.php') {
+                        header("Location: PostLogIN.php");
+                        exit();
+                    }
+                } else {
+                    echo "<script>alert('Incorrect password. Please try again.');</script>";
+                }
+            } else {
+                echo "<script>alert('User not found. Please check your username/email.');</script>";
+            }
+        } else {
+            echo "Error: " . mysqli_error($conn);
+        }
+    }
+} else {
+    // Redirect to the desired page if the session token is already set
+    if (basename($_SERVER['PHP_SELF']) != 'PostLogIN.php') {
         header("Location: PostLogIN.php");
         exit();
     }
-} else {
-    header("Location: PostLogIN.php");
-    exit();
 }
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,11 +76,11 @@ if (!isset($_SESSION['SPWSTestSession'])) {
         <label for="email">Email:</label><br>
         <input type="email" id="email" autocomplete="email" placeholder="Just write your email" name="email" required><br>
         <label for="password">password:</label><br>
-        <input type="password" autocomplete="new-password" id="password" placeholder="Just write your Password" name="username" required><br>
+        <input type="password" autocomplete="new-password" id="password" placeholder="Just write your Password" name="password" required><br>
 
 
         <input type="submit" name="submit" value="Login" class="submit_btn">
-        <p></p>Don't Have an Account :( Just <a target="_blank" href="signup.php">Create One.</a> <br><br>
+        <p></p>Don't Have an Account :( Just <a href="regiester.php">Create One.</a> <br><br>
     </form>
 
 </body>

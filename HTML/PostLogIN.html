@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5310112641192387"
+        crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-5310112641192387">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap">
+    </noscript>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator - SPP Technologies</title>
@@ -9,7 +17,7 @@
     <meta name="description"
         content="QR Code Generator for PDF, URL, WiFi, and more. Add logo, colors, frames, and download in high print quality, Free QR code generator by SPP Technologies">
     <meta name="keywords" content="QR code, generator, free, online, contact, website, URL, business card">
-    <meta name="author" content="SPWS">
+    <meta name="author" content="SPP Technologies">
 
     <!-- Favicon -->
     <link rel="icon" href="logo/logo.png" type="image/x-icon">
@@ -31,6 +39,8 @@
     <link rel="stylesheet" href="CSS/pricing.css">
     <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="CSS/tnc.css">
+    <link rel="stylesheet" href="CSS/privacy.css">
+    <link rel="stylesheet" href="CSS/media_queary.css">
 </head>
 
 <body id="theme-switcher" class="light-theme">
@@ -86,6 +96,7 @@
                 </div>
             </div>
             <button id="closeHelp" class="help-button">Close Help</button>
+            <button id="mobile_closeHelp" class="help-button" style="display: none;">Close Help</button>
         </div>
     </div>
     <section id="aboutLayout" class="about-layout">
@@ -132,7 +143,7 @@
                 </div>
                 <div class="q5 q">
                     <i>Q5. our Team</i><br>
-                    <span>Answer:<br> ME as the Founder of SPWS : Sombit Pramanik <br>
+                    <span>Answer:<br> ME as the Founder of SPP Technologies : Sombit Pramanik <br>
                         as an Designer <b>Ranit</b> Will Help Me a lot to Create This Website By Giving Some UI Fix and
                         much
                         more things to improve on it. <br>
@@ -142,21 +153,23 @@
                 </div>
             </div>
             <button id="closeAbout" class="about-button">Close About</button>
+            <button id="mobile_closeAbout" class="about-button" style="display: none;">Close About</button>
         </div>
     </section>
-    <section id="tncLayout" class="tnc-layout">
+    <!-- <section id="tncLayout" class="tnc-layout">
         <div class="tnc-content">
             <p>
             <h1>Scroll Down To use The Website</h1>
             <h2>Terms of Use</h2>
             <p>Last Updated: 12/11/2023</p>
             <p>
-                Please read these Terms of Use ("Terms") carefully before using the theqrcode.site website (the
+                Please read these Terms of Use ("Terms") & Disclaimer carefully before using the theqrcode.site website
+                (the
                 "Service") operated by <i>SPP Technologies</i>.
             </p>
             <p>
                 Your access to and use of the Service is conditioned on your acceptance of and compliance with these
-                Terms.
+                Terms and Disclaimer's.
                 These Terms apply to all visitors, users, and others who access or use the Service.
             </p>
             <p>
@@ -216,6 +229,60 @@
                 or non-infringement of intellectual property or other violation of rights.
             </p>
             <button id="closeTnc" class="tnc-button">Accept & Continue</button>
+            </p>
+        </div>
+    </section> -->
+    <section id="tncLayout" class="tnc-layout"
+        rename=" This is originally Belongs to the Terms aof use tab, changed for developer-only intention">
+        <div class="tnc-content">
+            <h1>Disclaimer</h1>
+            <p>
+                All the information on this website – theqrcode.site – is published in good faith and for general
+                information purpose only. theqrcode.site does not make any warranties about the completeness,
+                reliability and accuracy of this information.
+
+            </p>
+            <br>
+            <p>
+                Any action you take upon the information you find on this website (theqrcode.site), is strictly at
+                your own risk. theqrcode.site will not be liable for any losses and/or damages in connection with the
+                use
+                of our website.
+            </p>
+            <br>
+            <p>
+                From our website, you can visit other websites by following hyperlinks to such external sites. While we
+                strive to provide only quality links to useful and ethical websites, we have no control over the content
+                and nature of these sites.
+            </p>
+            <br>
+            <p>
+                These links to other websites do not imply a recommendation for all the content found on these sites.
+                Site owners and content may change without notice and may occur before we have the opportunity to remove
+                a
+                link which may have gone ‘bad’. Please be also aware that when you leave our website, other sites may
+                have
+                different privacy policies and terms which are beyond our control.
+            </p>
+            <br>
+            <p>
+                Please be sure to check the Privacy Policies of these sites as well as their “Terms of Service” before
+                engaging in any business or uploading any information.
+            </p>
+            <br>
+            <p>
+                Our Privacy Policy was created by the Privacy Policy Generator. Consent By using our website, you hereby
+                consent to our disclaimer and agree to its terms.
+            </p>
+            <br>
+            <p>
+                Update Should we update, amend or make any changes to this document, those changes will be prominently
+                posted here. Create a disclaimer page for theqrcode.site
+            </p>
+            <br>
+            </p>
+            <button id="closeTnc" class="tnc-button">Close</button>
+            <button id="mobile_closeTnc" class="tnc-button" style="display: none;">Close</button>
             </p>
         </div>
     </section>
@@ -375,36 +442,241 @@
                 </div>
             </div>
             <button id="closePricing" class="pricing-button">Close</button>
+            <button id="mobile_closePricing" style="display: none;" class="pricing-button">Close</button>
+        </div>
+    </section>
+    <section id="privacyLayout" class="privacy-layout" style="display: none;">
+        <div class="privacy-content">
+            <h2>Privacy Policy for theqrcode.site</h2><br>
+
+            <p>At theqrcode.site, accessible at undefined, one of our main priorities is the privacy of our visitors.
+                This
+                Privacy Policy document contains types of information that is collected and recorded by theqrcode.site
+                and
+                how
+                we use it.</p>
+            <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to
+                contact
+                us through email at m.sombitpramanit@gmail.com</p>
+            <p>This privacy policy applies only to our online activities and is valid for visitors to our website with
+                regards
+                to the information that they shared and/or collect in theqrcode.site. This policy is not applicable to
+                any
+                information collected offline or via channels other than this website.</p>
+            <br>
+            <p><strong>Consent</strong></p><br>
+            <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+            <br>
+            <p><strong>Information we collect</strong></p><br>
+            <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it,
+                will
+                be
+                made clear to you at the point we ask you to provide your personal information.</p>
+            <p>If you contact us directly, we may receive additional information about you such as your name, email
+                address,
+                phone number, the contents of the message and/or attachments you may send us, and any other information
+                you
+                may
+                choose to provide.</p>
+            <p>When you register for an Account, we may ask for your contact information, including items such as name,
+                theqrcode.site, address, email address, and telephone number.</p>
+            <br>
+            <p><strong>How we use your information</strong></p><br>
+            <p>We use the information we collect in various ways, including to:</p>
+            <ul>
+                <li>Provide, operate, and maintain our website</li>
+                <li>Improve, personalize, and expand our website</li>
+                <li>Understand and analyze how you use our website</li>
+                <li>Develop new products, services, features, and functionality</li>
+                <li>Communicate with you, either directly or through one of our partners, including for customer
+                    service, to
+                    provide you with updates and other information relating to the website, and for marketing and
+                    promotional
+                    purposes</li>
+                <li>Send you emails</li>
+                <li>Find and prevent fraud</li>
+            </ul>
+            <br>
+            <p><strong>Log Files</strong></p><br>
+            <p>theqrcode.site follows a standard procedure of using log files. These files log visitors when they visit
+                websites. All hosting companies do this and a part of hosting services' analytics. The information
+                collected
+                by
+                log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date
+                and
+                time
+                stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information
+                that
+                is
+                personally identifiable. The purpose of the information is for analyzing trends, administering the site,
+                tracking users' movement on the website, and gathering demographic information.</p>
+            <br>
+            <h3>Cookies and Web Beacons</h3><br>
+            <p>Like any other website, theqrcode.site uses ‘cookies'. These cookies are used to store information
+                including
+                visitors' preferences, and the pages on the website that the visitor accessed or visited. The
+                information is
+                used to optimize the users' experience by customizing our web page content based on visitors' browser
+                type
+                and/or other information.</p>
+            <br>
+            <h3>DoubleClick DART Cookie</h3><br>
+            <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve
+                ads
+                to
+                our site visitors based upon their visit to www.undefined and other sites on the internet. However,
+                visitors
+                may
+                choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy
+                at
+                the
+                following URL – <a href="https://policies.google.com/technologies/ads" target="_blank"
+                    rel="noopener noreferrer">https://policies.google.com/technologies/ads</a>.</p>
+            <p>Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed
+                below.
+                Each
+                of our advertising partners has their own Privacy Policy for their policies on user data. For easier
+                access,
+                we
+                hyperlinked to their Privacy Policies below.</p>
+            <ul>
+                <li>
+                    <p>Google</p>
+                    <p><a href="https://policies.google.com/technologies/ads"
+                            rel="noopener noreferrer">https://policies.google.com/technologies/ads</a></p>
+                </li>
+            </ul>
+            <br>
+            <p><strong>Advertising Partners Privacy Policies</strong></p><br>
+            <p>You may consult this list to find the Privacy Policy for each of the advertising partners of
+                theqrcode.site.
+            </p>
+            <p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are
+                used in
+                their respective advertisements and links that appear on theqrcode.site, which are sent directly to
+                users'
+                browser. They automatically receive your IP address when this occurs. These technologies are used to
+                measure
+                the
+                effectiveness of their advertising campaigns and/or to personalize the advertising content that you see
+                on
+                websites that you visit.</p>
+            <p>Note that theqrcode.site has no access to or control over these cookies that are used by third-party
+                advertisers.</p>
+            <br>
+            <p><strong>Third-Party Privacy Policies</strong></p><br>
+            <p>theqrcode.site's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising
+                you to
+                consult the respective Privacy Policies of these third-party ad servers for more detailed information.
+                It
+                may
+                include their practices and instructions about how to opt-out of certain options. You may find a
+                complete
+                list
+                of these Privacy Policies and their links here: Privacy Policy Links.</p>
+            <p>You can choose to disable cookies through your individual browser options. To know more detailed
+                information
+                about cookie management with specific web browsers, it can be found at the browsers' respective
+                websites.
+                What
+                Are Cookies?</p>
+            <br>
+            <p><strong>CCPA Privacy Policy (Do Not Sell My Personal Information)</strong></p><br>
+            <p>Under the CCPA, among other rights, California consumers have the right to:</p>
+            <p>Request that a business that collects a consumer's personal data disclose the categories and specific
+                pieces
+                of
+                personal data that a business has collected about consumers.</p>
+            <p>Request that a business delete any personal data about the consumer that a business has collected.</p>
+            <p>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</p>
+            <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these
+                rights,
+                please contact us.</p>
+            <br>
+            <p><strong>GDPR Privacy Policy (Data Protection Rights)</strong></p><br>
+            <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is
+                entitled
+                to
+                the following:</p>
+            <p>The right to access – You have the right to request copies of your personal data. We may charge you a
+                small
+                fee
+                for this service.</p>
+            <p>The right to rectification – You have the right to request that we correct any information you believe is
+                inaccurate. You also have the right to request that we complete the information you believe is
+                incomplete.
+            </p>
+            <p>The right to erasure – You have the right to request that we erase your personal data, under certain
+                conditions.
+            </p>
+            <p>The right to restrict processing – You have the right to request that we restrict the processing of your
+                personal
+                data, under certain conditions.</p>
+            <p>The right to object to processing – You have the right to object to our processing of your personal data,
+                under
+                certain conditions.</p>
+            <p>The right to data portability – You have the right to request that we transfer the data that we have
+                collected to
+                another organization, or directly to you, under certain conditions.</p>
+            <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these
+                rights,
+                please contact us.</p>
+            <br>
+            <p><strong>Children's Information</strong></p><br>
+            <p>Another part of our priority is adding protection for children while using the internet. We encourage
+                parents
+                and
+                guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+            <p>theqrcode.site does not knowingly collect any Personal Identifiable Information from children under the
+                age
+                of
+                13. If you think that your child provided this kind of information on our website, we strongly encourage
+                you
+                to
+                contact us immediately and we will do our best efforts to promptly remove such information from our
+                records.
+            </p>
+            <button id="closePrivacy" class="privacy-button">Close</button>
+            <button id="mobile_closePrivacy" style="display: none;" class="privacy-button">Close</button>
+        </div>
+    </section>
+    <section id="contactLayout" class="contact-layout" style="display: none;">
+        <div class="contact-content">
+            <button class="contact-button"><a href="tel:+916297037940">Call Me</a></button>
+            <p><button id="closeContact" class="contact-button">Close</button></p>
+            <p><button id="mobile_closeContact" class="contact-button" style="display: none;">Close</button></p>
         </div>
     </section>
     <!-- From Hear the Actual Website will Start -->
     <!-- This will be converted into the top navigation bar in Mobile Device, and if the display be large enough then this will work like as an detailed navigation bar uses for profile and other navigation links  -->
-    <section class="left_menu">
+    <header class="left_menu">
         <nav>
             <div class="profile">
                 <div class="profile_text">
                     <ul>
-                        <li><a href="#" class="p_links" style="display: none;">insights</a></li>
-                        <li><a href="#" id="Help" class="p_links">help</a></li>
+                        <li><a href="#Help" id="Help" class="p_links">help</a></li>
+                        <li><a href="#About" id="about" class="nav_links">about</a></li>
                     </ul>
                 </div>
             </div>
             <hr class="nav_devider">
             <div class="nav_bar">
                 <ul>
-                    <li><a href="#" id="tnc" class="nav_links">Terms of use</a></li>
-                    <li><a href="#" id="pricing" class="nav_links">Pricing</a></li>
-                    <li><a href="#" id="about" class="nav_links">about</a></li>
-                    <li><a href="PostLogIN.php" target="_blank" class="nav_links">login</a></li>
+                    <li><a href="#Privacy" id="privacy" class="nav_links">Privacy & policies</a></li>
+                    <!-- <li><a href="#Terms" id="tnc" class="nav_links">Terms of user</a></li> -->
+                    <li><a href="#Declaimer" id="tnc" class="nav_links">Declaimer</a></li>
+                    <li><a href="#Pricing" id="pricing" class="nav_links">Pricing</a></li>
+                    <li><a href="#Contact" id="contact" class="nav_links">contact</a></li>
+                    <li><a href="logout.php" target="_blank" class="nav_links">logout</a></li>
                 </ul>
             </div>
         </nav>
-        <p>
-            &copy; <i>SPWS</i> 2023 all rights reserved <br><br>
+        <p class="copy">
+            &copy; <i>SPP Technologies</i> 2023 all rights reserved <br><br>
             all Design and Colure Code are Property of SPP Technologies. Use without Permission have
             Copyright issue <br><br><i>'QR Code' is a registered Trademark of DENSO WAVE INCORPORATED</i>
         </p>
-    </section>
+    </header>
     <hr class="menu_devider">
     <!-- This will work for the main area used for the main contain for the website which will contain the main qrcode generator function. -->
     <section class="right_menu">
@@ -416,11 +688,11 @@
             <div class="input_fields">
                 <p>Select a Tag and Create QRCode's For your Need</p>
                 <ul>
-                    <li><a id="upiButton">UPI</a></li>
-                    <li><a id="textButton">Free Text</a></li>
-                    <li><a id="pdfButton">PDF</a></li>
-                    <li><a id="urlButton">URL</a></li>
-                    <li><a id="wifiButton">WIFI</a></li>
+                    <li id="upiButton"><a>UPI</a></li>
+                    <li id="textButton"><a>Text</a></li>
+                    <li id="pdfButton"><a>PDF</a></li>
+                    <li id="urlButton"><a>URL</a></li>
+                    <li id="wifiButton"><a>WIFI</a></li>
                 </ul>
                 <hr class="button_hr">
                 <div class="input_from">
@@ -569,40 +841,53 @@
                 <p><span style="font-weight: 600;">New QRCode Preview</span><br><br>Note : we use data collection
                     policies under some condition's, if you want to delete your data with us you can just make a simple
                     request in our main website,and then with remove your data and handover a copy to you (Encrypted)
-                </p><br>
+                </p>
+                <br>
                 <hr class="button_hr"><br>
                 <div class="status">
                     <div class="qr_img">
                         <img id="myImage" src="logo/Default_qr.png" alt="QR Image" srcset="">
-                        <button id="downloadButton" type="download" class="download">Download The QRCode</button>
+                        <button id="downloadButton" type="download" class="download main_down   ">Download The
+                            QRCode</button>
                     </div>
                     <div class="stat">
                         <ul>
-                            <li>from the php database set limit of max 20MB of alloted space</li><br>
+                            <!-- <li>from the php database set limit of max 20MB of alloted space</li><br>
                             <li>the user only upload pdf type files</li><br>
                             <li>show status for how much space left</li><br>
-                            <li>show the count fo how many QRCode's are Generated</li><br>
+                            <li>show the count fo how many QRCode's are Generated</li><br> -->
                         </ul>
                     </div>
                 </div>
             </div>
         </main>
-        <div class="advertisement">
-            <!-- place for google bottom banner ad -->
-            <p>Wetting for advertisement and sponsor image or Text, if you intrusted clink hear</p>
-        </div>
     </section>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5310112641192387"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="JS/theme.js"></script>
-    <script src="JS/from_display.js"></script>
-    <script src="JS/download.js"></script>
-    <script src="JS/beta_notice.js"></script>
-    <script src="JS/pop_layout.js"></script>
-    <script src="JS/from_send_ajax.js"></script>
-    <script src="JS/auto_fetch.js"></script>
+    <footer>
+        <ol>
+            <li><a href="#Privacy" id="mobile_privacy" class="nav_links">Privacy & policies</a></li>
+            <!-- <li><a href="#Terms" id="mobile_tnc" class="nav_links">Terms of user</a></li> -->
+            <li><a href="#Declaimer" id="mobile_tnc" class="nav_links">Declaimer</a></li>
+            <li><a href="#Pricing" id="mobile_pricing" class="nav_links">Pricing</a></li>
+            <li><a href="#Contact" id="mobile_contact" class="nav_links">contact</a></li>
+            <li><a href="logout.php" target="_blank" class="nav_links">logout</a></li>
+            <li><a href="#Help" id="mobile_Help" class="p_links">help</a></li>
+            <li><a href="#About" id="mobile_about" class="nav_links">about</a></li>
+        </ol>
+        <p class="ft_copy">
+            &copy; <i>SPP Technologies</i> 2023 all rights reserved <br><br>
+            all Design and Colure Code are Property of SPP Technologies. Use without Permission have
+            Copyright issue <br><br><i>'QR Code' is a registered Trademark of DENSO WAVE INCORPORATED</i>
+        </p>
+    </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="JS/theme.js"></script>
+<script src="JS/from_display.js"></script>
+<script src="JS/download.js"></script>
+<!-- <script src="JS/beta_notice.js"></script> -->
+<script src="JS/pop_layout.js"></script>
+<script src="JS/from_send_ajax.js"></script>
+<script src="JS/auto_fetch.js"></script>
+<script src="JS/mobile_pop.js"></script>
 
 </html>
