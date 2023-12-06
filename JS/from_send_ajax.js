@@ -1,17 +1,4 @@
 $(document).ready(function() {
-    // if(localStorage.getItem('filename')){
-    //     console.log("File Name is Present : ",localStorage.getItem('filename'));
-    //     if(localStorage.removeItem('filename')){
-    //         console.log('successfully clear the localstorage');
-    //     }
-    //     else{
-    //         console.log(Error);
-    //     }
-    // }
-    // else{
-    //     console.log("no File Name is Present on the LocalStorage");
-    // }
-    
     // Function to generate a 5-digit unique hex code
     function generateUniqueHexCode() {
         return Math.floor(Math.random() * 0xFFFFF).toString(16).toUpperCase().padStart(5, '0');
@@ -21,9 +8,6 @@ $(document).ready(function() {
     $(".CreateQr").on("click", function(event) {
         // Prevent the default form submission
         event.preventDefault();
-
-        // Generate a unique 5-digit hex code
-        // var filename = Math.floor(Math.random() * 0xFFFFF).toString(16).toUpperCase().padStart(5, '0');
         var file_name = generateUniqueHexCode();
 
         // Save the unique code to local storage
