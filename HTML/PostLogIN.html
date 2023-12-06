@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="CSS/tnc.css">
     <link rel="stylesheet" href="CSS/privacy.css">
     <link rel="stylesheet" href="CSS/media_queary.css">
+    <link rel="stylesheet" href="CSS/code_snipt.css">
 </head>
 
 <body id="theme-switcher" class="light-theme">
@@ -153,82 +154,6 @@
             <button id="mobile_closeAbout" class="about-button" style="display: none;">Close About</button>
         </div>
     </section>
-    <!-- <section id="tncLayout" class="tnc-layout">
-        <div class="tnc-content">
-            <p>
-            <h1>Scroll Down To use The Website</h1>
-            <h2>Terms of Use</h2>
-            <p>Last Updated: 12/11/2023</p>
-            <p>
-                Please read these Terms of Use ("Terms") & Disclaimer carefully before using the theqrcode.site website
-                (the
-                "Service") operated by <i>SPP Technologies</i>.
-            </p>
-            <p>
-                Your access to and use of the Service is conditioned on your acceptance of and compliance with these
-                Terms and Disclaimer's.
-                These Terms apply to all visitors, users, and others who access or use the Service.
-            </p>
-            <p>
-                By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part
-                of
-                the terms, then you may not access the Service.
-            </p>
-            <h3>Intellectual Property</h3>
-            <p>
-                The Service and its original content, features, and functionality are owned by <i>Sombit Pramanik web
-                    Services</i> and are
-                protected by international copyright, trademark, patent, trade secret, and other intellectual property
-                or
-                proprietary rights laws.
-            </p>
-            <h3>QR Code Content</h3>
-            <p>
-                By generating QR codes using our Service, you agree that you have the right to use the content embedded
-                in
-                the QR codes. We are not responsible for the content you choose to encode in QR codes, and you assume
-                all
-                legal responsibilities associated with such content.
-            </p>
-            <h3>Use License</h3>
-            <p>
-                Permission is granted to temporarily download one copy of the materials (information or software) on
-                <i>SPP Technologies</i> website for personal, non-commercial transitory viewing only. This
-                is the grant of a
-                license, not a transfer of title, and under this license, you may not:
-            </p>
-            <ol>
-                <li>modify or copy the materials;</li>
-                <li>use the materials for any commercial purpose or for any public display (commercial or
-                    non-commercial);
-                </li>
-                <li>attempt to De-compile or reverse engineer any software contained on SPP Technologies
-                    website;</li>
-                <li>remove any copyright or other proprietary notations from the materials; or</li>
-                <li>transfer the materials to another person or "mirror" the materials on any other server.</li>
-            </ol>
-            <p>
-                This license shall automatically terminate if you violate any of these restrictions and may be
-                terminated by
-                SPP Technologies at any time. Upon terminating your viewing of these materials or upon the
-                termination of
-                this license, you must destroy any downloaded materials in your possession whether in electronic or
-                printed
-                format.
-            </p>
-            <h3>Disclaimer</h3>
-            <p>
-                The materials on theqrocde.site website are provided on an 'as is' basis. SPP Technologies
-                makes
-                no warranties, expressed or implied, and hereby disclaims and negates all other warranties including,
-                without limitation, implied warranties or conditions of merchantability, fitness for a particular
-                purpose,
-                or non-infringement of intellectual property or other violation of rights.
-            </p>
-            <button id="closeTnc" class="tnc-button">Accept & Continue</button>
-            </p>
-        </div>
-    </section> -->
     <section id="tncLayout" class="tnc-layout"
         rename=" This is originally Belongs to the Terms aof use tab, changed for developer-only intention">
         <div class="tnc-content">
@@ -679,7 +604,8 @@
     <section class="right_menu">
         <div class="top_brand">
             <p class="tag">Create Static & Dynamic QRCode's</p>
-            <span class="power"> <i>Powered by SPP Technologies</i></span>
+            <span class="power"><a href="http://spptechnologies.in" target="_blank"><i>Powered by SPP
+                        Technologies</i></a></span>
         </div>
         <main>
             <div class="input_fields">
@@ -705,25 +631,18 @@
                                 placeholder="Example : Pramanik"><br>
                             <label for="upi_amount">Wanted Amount</label>
                             <input type="text" name="upi_amount" id="upi_amount" placeholder="Example : 101"><br>
-                            <button type="submit" class="CreateQr" name="upi_submit" data-from-valid="&upi_submit=1"
-                                from-valid="&upi_submit=1">Create QR</button>
+                            <label for="message">Message</label>
+                            <input type="text" name="message" id="message" placeholder="Example : send me 100 INR"><br>
+                            <button type="submit" class="CreateQr" name="p_upi_submit"
+                                data-from-valid="&premium_upi_submit=1" from-valid="&premium_upi_submit=1">Create
+                                QR</button>
                         </form>
                         <br>
                         <p>
                         <ol>
-                            <li>
-                                <b><span>Q. Where to use ?</span></b><br>
-                                <i><span><b>Answer: </b>use for creating custom payment received QRCode.</span></i>
-                            </li><br>
-                            <li>
-                                <b><span>Q. How to share ?</span></b><br>
-                                <i><span><b>Answer: </b>Just Download the code and share where ever you want.</span></i>
-                            </li><br>
-                            <li>
-                                <b><span>Q. Can I Customize The Code ?</span></b><br>
-                                <i><span><b>Answer: </b>Sorry ! : Now we can't support this, if Your are a PHP
-                                        Developer then Visit the carer Page for our Help.</span></i>
-                            </li><br>
+                            <p>Tryout Your API</p>
+                            <pre
+                                class="myPreTag">https://api.theqrcode.site/yourAuthenticatioTocken/upiID%20name%20Amount%20message</pre>
                         </ol>
                         </p>
                     </div>
@@ -731,27 +650,17 @@
                         <form action="" method="POST">
                             <label for="text">Enter the Text</label>
                             <input type="text" name="text" id="text">
-                            <button type="submit" name="text_submit" data-from-valid="&text_submit=1"
-                                from-valid="&text_submit=1" class="CreateQr">Create QR</button>
+                            <button type="submit" name="p_text_submit" data-from-valid="&p_text_submit=1"
+                                from-valid="&p_text_submit=1" class="CreateQr">Create QR</button>
                         </form><br>
                         <p>we are Currently offering to create a fully customize business card page <br> <b><i><a
                                         href="https://theqrcode.site/PostLogIN" target="_blank"
                                         class="nav_links">login</a> </i></b> to know more</p><br>
                         <p>
                         <ol>
-                            <li>
-                                <b><span>Q. Where to use ?</span></b><br>
-                                <i><span><b>Answer: </b>use For Creating Short Notes & support instruction</span></i>
-                            </li><br>
-                            <li>
-                                <b><span>Q. How to share ?</span></b><br>
-                                <i><span><b>Answer: </b>Just Download the code and share where ever you want.</span></i>
-                            </li><br>
-                            <li>
-                                <b><span>Q. Can I Customize The Code ?</span></b><br>
-                                <i><span><b>Answer: </b>Sorry ! : Now we can't support this, if Your are a PHP
-                                        Developer then Visit the carer Page for our Help.</span></i>
-                            </li><br>
+                            <p>Tryout Your API</p>
+                            <pre
+                                class="myPreTag">https://api.theqrcode.site/yourAuthenticatioTocken/upiID%20name%20Amount%20message</pre>
                         </ol>
                         </p>
                     </div>
@@ -775,24 +684,14 @@
                         <form action="" method="POST">
                             <label for="url">Enter the URL</label>
                             <input type="url" name="url" id="url">
-                            <button type="submit" name="url_submit" data-from-valid="&url_submit=1"
-                                from-valid="&url_submit=1" class="CreateQr">Create QR</button>
+                            <button type="submit" name="p_url_submit" data-from-valid="&p_url_submit=1"
+                                from-valid="&p_url_submit=1" class="CreateQr">Create QR</button>
                         </form><br>
                         <p>
                         <ol>
-                            <li>
-                                <b><span>Q. Where to use ?</span></b><br>
-                                <i><span><b>Answer: </b>use For Creating URL instead of Lengthy URl's</span></i>
-                            </li><br>
-                            <li>
-                                <b><span>Q. How to share ?</span></b><br>
-                                <i><span><b>Answer: </b>Just Download the code and share where ever you want.</span></i>
-                            </li><br>
-                            <li>
-                                <b><span>Q. Can I Customize The Code ?</span></b><br>
-                                <i><span><b>Answer: </b>Sorry ! : Now we can't support this, if Your are a PHP
-                                        Developer then Visit the carer Page for our Help.</span></i>
-                            </li><br>
+                            <p>Tryout Your API</p>
+                            <pre
+                                class="myPreTag">https://api.theqrcode.site/yourAuthenticatioTocken/upiID%20name%20Amount%20message</pre>
                         </ol>
                         </p>
                     </div>
@@ -812,22 +711,14 @@
                                 <option value="false">Visible</option>
                                 <option value="true">Hidden</option>
                             </select><br><br>
-                            <button type="submit" name="wifi_submit" data-from-valid="&wifi_submit=1"
-                                from-valid="&wifi_submit=1" class="CreateQr">Create OR</button>
+                            <button type="submit" name="p_wifi_submit" data-from-valid="&p_wifi_submit=1"
+                                from-valid="&p_wifi_submit=1" class="CreateQr">Create OR</button>
                         </form><br>
                         <p>
                         <ol>
-                            <li>
-                                <b><span>Q. Where to use ?</span></b><br>
-                                <i><span><b>Answer: </b>Share Wifi Network's Securely</span></i>
-                            </li><br>
-                            <li>
-                                <b><span>Q. How to Use ?</span></b><br>
-                                <i><span><b>Answer: </b>Enter you'r WiFi Network Name in SSID input Section <br>Then
-                                        Enter Your Password of Wifi Network <br>Then Select Encryption Type <br>Then
-                                        Select Network Type <br>Boom ! Hit the Generate and you are good to
-                                        go.</span></i>
-                            </li><br>
+                            <p>Tryout Your API</p>
+                            <pre
+                                class="myPreTag">https://api.theqrcode.site/yourAuthenticatioTocken/upiID%20name%20Amount%20message</pre>
                         </ol>
                         </p>
                     </div>
@@ -838,8 +729,8 @@
                 <p><span style="font-weight: 600;">New QRCode Preview</span><br><br>Note : we use data collection
                     policies under some condition's, if you want to delete your data with us you can just make a simple
                     request in our main website,and then with remove your data and handover a copy to you (Encrypted)
+                    <br>
                 </p>
-                <br>
                 <hr class="button_hr"><br>
                 <div class="status">
                     <div class="qr_img">
@@ -878,6 +769,7 @@
     </footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="JS/code_snipt.js"></script>
 <script src="JS/theme.js"></script>
 <script src="JS/from_display.js"></script>
 <script src="JS/download.js"></script>
