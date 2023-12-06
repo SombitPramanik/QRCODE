@@ -14,27 +14,52 @@ Welcome to TheQRCode.site! In this project, we are developing a website to gener
 
 ## 🎨 Features
 
-- Generate QR codes for UPI, Free text, PDF, URL, and Wifi
+- Generate QR codes for UPI, Free text, PDF, URL, and WiFi
 - Responsive layouts for various devices
 - Interactive components and user-friendly interfaces
+- Exclusive Options For Business
+- User Friendly API
+- Comparatively Low Cost For Small Business.
 
 ## 🚀 Getting Started
 
 To get started with this project, follow these steps:
 
-1. **Clone** the repository:
+1. **Setup your Environment's**<br> 
+- <span style="font-size:24px;">***Windows***</span><br>
+   - Download the XAMPP server for Windows with this <a href="https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe" target="_blank">*Link*</a><br>
+   - Install The XAMPP server on your Machine, Follow <a href="https://www.apachefriends.org/faq_windows.html" target="_blank">*This*</a> Documentation. <br>
+   - **Clone** the repository inside the "\xampp\htdocs\":
 
    ```bash
-   git clone https://github.com/Sombitpramanik/QRCODE.git
+    git clone https://github.com/Sombitpramanik/QRCODE.git
    ```
+   - after cloning the repo, This will Create a Folder *(QRCODE)*
+<br>
+- <span style="font-size:24px;">***Linux***</span><br>
+   - Download the XAMPP server for Windows with this <a href="https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/8.2.12/xampp-linux-x64-8.2.12-0-installer.run" target="_blank">*Link*</a><br>
+   - Install The XAMPP server on your Machine, Follow <a href="https://www.apachefriends.org/faq_linux.html" target="_blank">*This*</a> Documentation. <br>
+   - **Clone** the repository inside the "/opt/lampp/htdocs/"
 
-2. **Add this repository as a remote**:
+      ```bash
+      git clone https://github.com/Sombitpramanik/QRCODE.git
+      ```
+   - after cloning the repo, This will Create a Folder *(QRCODE)*
+
+<br>
+
+2. **Preview Your changes** in Your own Machine:
+
+   - Open your XAMPP Control Panel and start the *Apache2* and *MySQL* Server
+   - Go to https://localhost/QRCODE/ 
+
+3. **Add this repository as a remote**:
 
    ```bash
    git remote add origin https://github.com/Sombitpramanik/QRCODE.git
    ```
 
-3. **Create and switch to your DEV branch**:
+4. **Create and switch to your DEV branch**:
 
    ```bash
    git checkout -b DEV/{your_name}/{feature_or_section_name}
@@ -42,10 +67,12 @@ To get started with this project, follow these steps:
 
    Make necessary changes, and when ready to commit and push:
 
-4. **Push your changes** to this branch:
+5. **Push your changes** to this branch:
 
    ```bash
    git push --set-upstream origin DEV/{your_name}/{feature_or_section_name}
    ```
 
    The first time, it may prompt you for your GitHub username and password.
+
+6. ***Boom*** You are Officially part of our GitHub OpenSource Community

@@ -35,7 +35,7 @@ if (isset($_POST["submit"])) {
             if (mysqli_query($conn, $query)) {
                 $error_message = "Registration successful! Your username is $email. Redirecting in 3 seconds";
                 echo "<script>alert(" . json_encode($error_message) . ");</script>";
-                echo "<script>setTimeout(function() { window.location.href = 'PostLogIN.php'; }, 3000);</script>";
+                echo "<script>setTimeout(function() { window.location.href = 'PostLogIN'; }, 3000);</script>";
                 exit();
             } else {
 

@@ -9,7 +9,7 @@ if (!isset($_SESSION['unique_token'])) {
         $password = $_POST["password"];
 
         // Include your database connection configuration
-        require './config.php';
+        require 'config.php';
 
         // Fetch the hashed password from the database based on the provided username/email
         $query = "SELECT email, password FROM normal_user WHERE email = '$email'";
@@ -27,8 +27,8 @@ if (!isset($_SESSION['unique_token'])) {
                     $_SESSION['unique_token'] = $unique_token;
 
                     // Check if the user is not already on the PostLogIN.php page before redirecting
-                    if (basename($_SERVER['PHP_SELF']) != 'PostLogIN.php') {
-                        header("Location: PostLogIN.php");
+                    if (basename($_SERVER['PHP_SELF']) != 'PostLogIN') {
+                        header("Location: PostLogIN");
                         exit();
                     }
                 } else {
@@ -43,8 +43,8 @@ if (!isset($_SESSION['unique_token'])) {
     }
 } else {
     // Redirect to the desired page if the session token is already set
-    if (basename($_SERVER['PHP_SELF']) != 'PostLogIN.php') {
-        header("Location: PostLogIN.php");
+    if (basename($_SERVER['PHP_SELF']) != 'PostLogIN') {
+        header("Location: PostLogIN");
         exit();
     }
 }
