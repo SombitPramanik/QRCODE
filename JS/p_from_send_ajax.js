@@ -1,11 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // Function to generate a 5-digit unique hex code
     function generateUniqueHexCode() {
         return Math.floor(Math.random() * 0xFFFFF).toString(16).toUpperCase().padStart(5, '0');
     }
-    
+
     // Add click event listener to elements with the class CreateQr
-    $(".CreateQr").on("click", function(event) {
+    $(".p_CreateQr").on("click", function (event) {
         // Prevent the default form submission
         event.preventDefault();
         var file_name = generateUniqueHexCode();
@@ -26,18 +26,17 @@ $(document).ready(function() {
         // Send the data to the server using AJAX
         $.ajax({
             type: "POST",
-            url: "create_qr.php",
+            url: "api.php",
             data: formData,
             dataType: "json", // Expect JSON response
-            success: function(response) {
+            success: function (response) {
                 // Handle the server response
-                console.log(response.status, response.message);
+                console.log(response.status, response.message, response.qrCodeFileName);
             },
-            error: function(error) {
+            error: function (error) {
                 // Handle errors if the request fails
                 console.error("Error:", error);
             }
         });
     });
 });
-

@@ -633,8 +633,8 @@
                             <input type="text" name="upi_amount" id="upi_amount" placeholder="Example : 101"><br>
                             <label for="message">Message</label>
                             <input type="text" name="message" id="message" placeholder="Example : send me 100 INR"><br>
-                            <button type="submit" class="CreateQr" name="p_upi_submit"
-                                data-from-valid="&premium_upi_submit=1" from-valid="&premium_upi_submit=1">Create
+                            <button type="submit" class="p_CreateQr" name="p_upi_submit"
+                                data-from-valid="&p_upi_submit=1" from-valid="&p_upi_submit=1">Create
                                 QR</button>
                         </form>
                         <br>
@@ -651,7 +651,7 @@
                             <label for="text">Enter the Text</label>
                             <input type="text" name="text" id="text">
                             <button type="submit" name="p_text_submit" data-from-valid="&p_text_submit=1"
-                                from-valid="&p_text_submit=1" class="CreateQr">Create QR</button>
+                                from-valid="&p_text_submit=1" class="p_CreateQr">Create QR</button>
                         </form><br>
                         <p>we are Currently offering to create a fully customize business card page <br> <b><i><a
                                         href="https://theqrcode.site/PostLogIN" target="_blank"
@@ -685,7 +685,7 @@
                             <label for="url">Enter the URL</label>
                             <input type="url" name="url" id="url">
                             <button type="submit" name="p_url_submit" data-from-valid="&p_url_submit=1"
-                                from-valid="&p_url_submit=1" class="CreateQr">Create QR</button>
+                                from-valid="&p_url_submit=1" class="p_CreateQr">Create QR</button>
                         </form><br>
                         <p>
                         <ol>
@@ -712,7 +712,7 @@
                                 <option value="true">Hidden</option>
                             </select><br><br>
                             <button type="submit" name="p_wifi_submit" data-from-valid="&p_wifi_submit=1"
-                                from-valid="&p_wifi_submit=1" class="CreateQr">Create OR</button>
+                                from-valid="&p_wifi_submit=1" class="p_CreateQr">Create OR</button>
                         </form><br>
                         <p>
                         <ol>
@@ -775,7 +775,8 @@
 <script src="JS/download.js"></script>
 <!-- <script src="JS/beta_notice.js"></script> -->
 <script src="JS/pop_layout.js"></script>
-<script src="JS/from_send_ajax.js"></script>
+<!-- <script src="JS/from_send_ajax.js"></script> -->
+<script src="JS/p_from_send_ajax.js"></script>
 <script src="JS/auto_fetch.js"></script>
 <script src="JS/mobile_pop.js"></script>
 
