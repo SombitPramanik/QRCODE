@@ -4,7 +4,6 @@ ini_set('display_errors', 1);
 
 require 'config.php';
 require 'phpqrcode-2010100721_1.1.4/phpqrcode/qrlib.php';
-
 $response = array(); // Create an array to store the response
 
 function generateQRCode($data, $filename, $authenticationToken) {
@@ -12,6 +11,10 @@ function generateQRCode($data, $filename, $authenticationToken) {
     QRcode::png($data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);
     return $qrCodeFileName;
 }
+
+
+header("Location: index.php");
+exit();
 
 if(isset($_POST['p_upi_submit'])) {
     $upi_id = $_POST['upi_id'];
