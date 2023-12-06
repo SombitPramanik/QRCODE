@@ -7,9 +7,18 @@ require 'config.php';
 
 session_unset();
 session_destroy();
+function generateRandomString($length) {
+    $characters = '${Ac@R*0nzABCD21#E49FGU}H^I!bc78\de4fg6KT0LM60N0ep4wPQk7l3m7n5RSxlVLij2JXY?G6aZ39"3)Bd%Z]SQ^d/SP4{tWTPqr9stu2vW1xy0z4';
+    $randomString = '';
 
+    for($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+    }
 
-if (isset($_POST["submit"])) {
+    return $randomString;
+}
+
+if(isset($_POST["submit"])) {
     $first_name = $_POST["f_name"];
     $last_name = $_POST["l_name"];
     $email = $_POST["email"];
@@ -21,20 +30,27 @@ if (isset($_POST["submit"])) {
     // Check if the email is already taken
     $duplicate = mysqli_query($conn, "SELECT * FROM normal_user WHERE email = '$email'");
 
-    if (mysqli_num_rows($duplicate) > 0) {
+    if(mysqli_num_rows($duplicate) > 0) {
         $error_message = "Email and User Name is Already Taken\nUse Another One";
-        echo "<script>alert(" . json_encode($error_message) . ");</script>";
+        echo "<script>alert(".json_encode($error_message).");</script>";
     } else {
-        if ($password == $c_password) {
+        if($password == $c_password) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+            $rawString = $email;
+            $salt = "SPPTechnologies";
+            $hashedString = md5($rawString.$salt);
+            $random_key = generateRandomString(40);
+            $key = md5($rawString.$random_key);
+            $secure_key = substr($key, 0, 10);
+
 
             // Insert user data into the database
             $query = "INSERT INTO normal_user (first_name, last_name, email, password, mobile, account_type) VALUES ('$first_name', '$last_name', '$email', '$hashed_password', '$mobile', '$ac_type')";
 
 
-            if (mysqli_query($conn, $query)) {
+            if(mysqli_query($conn, $query)) {
                 $error_message = "Registration successful! Your username is $email. Redirecting in 3 seconds";
-                echo "<script>alert(" . json_encode($error_message) . ");</script>";
+                echo "<script>alert(".json_encode($error_message).");</script>";
                 echo "<script>setTimeout(function() { window.location.href = 'PostLogIN'; }, 3000);</script>";
                 exit();
             } else {
@@ -42,7 +58,7 @@ if (isset($_POST["submit"])) {
             }
         } else {
             $error_message = "Password Does Not Match. Please Try again";
-            echo "<script>alert(" . json_encode($error_message) . ");</script>";
+            echo "<script>alert(".json_encode($error_message).");</script>";
         }
     }
 }

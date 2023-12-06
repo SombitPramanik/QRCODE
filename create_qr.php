@@ -27,7 +27,8 @@ if (isset($_POST['upi_submit'])) {
     // $response['message'] = $_POST; # This is for the debugging to see the send data over POST Request's
     // Encode the response as JSON and print it
     echo json_encode($response);
-}elseif (isset($_POST['text_submit'])) {
+}
+elseif (isset($_POST['text_submit'])) {
     $qr_data = $_POST['text'];
     $filename = $_POST['filename'];    
     $qrCodeFileName = "qr_img/Free/$filename.png";

@@ -118,7 +118,8 @@ body {
     /* border: 2px solid red; */
     height: 100px;
     border-radius: 10px;
-    justify-items: center;
+    /* justify-items: center; */
+    justify-content: space-evenly;
     align-items: center;
     margin: 0 0 2vh 0;
 }
