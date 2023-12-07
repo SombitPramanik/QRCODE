@@ -26,7 +26,7 @@ $(document).ready(function () {
         // Send the data to the server using AJAX
         $.ajax({
             type: "POST",
-            url: "api.php",
+            url: "p_create_qr.php",
             data: formData,
             dataType: "json", // Expect JSON response
             success: function (response) {
