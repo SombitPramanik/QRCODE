@@ -7,9 +7,6 @@ require 'phpqrcode-2010100721_1.1.4/phpqrcode/qrlib.php';
 
 $response = array(); // Create an array to store the response
 
-header("Location: index.php");
-exit();
-
 if(isset($_POST['upi_submit'])) {
     $upi_id = $_POST['upi_id'];
     $f_name = $_POST['upi_first_name'];
