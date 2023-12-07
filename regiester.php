@@ -35,26 +35,59 @@ if(isset($_POST["submit"])) {
         echo "<script>alert(".json_encode($error_message).");</script>";
     } else {
         if($password == $c_password) {
+            $total_request = 0;
             $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hash the password
             $rawString = $email;
             $salt = "SPPTechnologies";
             $hashedString = md5($rawString.$salt);
             $random_key = generateRandomString(40);
-            $key = md5($rawString.$random_key);
-            $secure_key = substr($key, 0, 10);
-
-
+            $key = hash('sha256', $hashedString.$rawString.$random_key);
+            $secure_key = substr($key, 0, 15);
             // Insert user data into the database
-            $query = "INSERT INTO normal_user (first_name, last_name, email, password, mobile, account_type) VALUES ('$first_name', '$last_name', '$email', '$hashed_password', '$mobile', '$ac_type')";
+            $unique_token = substr(hash('sha256', $email.$hashed_password), 0, 30);
+            $_SESSION['unique_token'] = $unique_token;
+            $invalid_prefixes = array('1234', '3214', '2341', '4321', '0000');
 
+            // Mobile number verification
+            if(is_numeric($mobile) && strlen($mobile) === 10 && !in_array(substr($mobile, 0, 4), $invalid_prefixes)) {
+                $directoryPath = "P_IMG/$authenticationToken";
+                if($ac_type == 'Stater') {
+                    $total_request = 0;
+                    $maxRequest = 20;
+                } elseif($ac_type == 'Premium') {
+                    $total_request = 0;
+                    $maxRequest = 200;
+                } elseif($ac_type == 'Business') {
+                    $total_request = 0;
+                    $maxRequest = 1000;
+                }
 
-            if(mysqli_query($conn, $query)) {
-                $error_message = "Registration successful! Your username is $email. Redirecting in 3 seconds";
-                echo "<script>alert(".json_encode($error_message).");</script>";
-                echo "<script>setTimeout(function() { window.location.href = 'PostLogIN'; }, 3000);</script>";
-                exit();
+                if(!is_dir($directoryPath)) {
+                    mkdir($directoryPath, 0755, true);
+
+                    // Change ownership of the directory (www-data:www-data is a common web server user and group)
+                    chown($directoryPath, 'www-data');
+                    chgrp($directoryPath, 'www-data');
+
+                    // Execute the query
+                    $query = "INSERT INTO normal_user (first_name, last_name, email, password, mobile, account_type, authentication_token, total_request, max_request) VALUES ('$first_name', '$last_name', '$email', '$hashed_password', '$mobile', '$ac_type', '$secure_key', '$total_request', '$maxRequest')";
+
+                    if(mysqli_query($conn, $query)) {
+                        $error_message = "Registration successful! Your username is $email. Redirecting in 3 seconds";
+                        echo "<script>alert(".json_encode($error_message).");</script>";
+                        echo "<script>setTimeout(function() { window.location.href = 'PostLogIN'; }, 3000);</script>";
+                        exit();
+                    } else {
+                        $error_message = "Error inserting data into the database";
+                        echo "<script>alert(".json_encode($error_message).");</script>";
+                    }
+                } else {
+                    $error_message = "User already registered";
+                    echo "<script>alert(".json_encode($error_message).");</script>";
+                }
             } else {
-
+                $error_message = "Invalid mobile number";
+                echo "<script>alert(".json_encode($error_message).");</script>";
             }
         } else {
             $error_message = "Password Does Not Match. Please Try again";
@@ -126,7 +159,7 @@ if(isset($_POST["submit"])) {
         <label for="ac_type">Account Type:</label><br>
         <select id="ac_type" name="ac_type" required>
             <option value="Starter">Starter</option>
-            <option value="premium">premium</option>
+            <option value="Premium">Premium</option>
             <option value="Business">Business</option>
             <!-- Add more account types if needed -->
         </select><br>
