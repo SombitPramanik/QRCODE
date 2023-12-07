@@ -7,20 +7,31 @@ require 'phpqrcode-2010100721_1.1.4/phpqrcode/qrlib.php';
 $response = array(); // Create an array to store the response
 
 function generateQRCode($data, $filename, $authenticationToken) {
-    $qrCodeFileName = "API_IMG/$authenticationToken/$filename.png";
-    QRcode::png($data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);
-    return $qrCodeFileName;
+
+    $directoryPath = "P_IMG/$authenticationToken";
+
+    if(!is_dir($directoryPath)) {
+        mkdir($directoryPath, 0755, true);
+
+        // Change ownership of the directory (www-data:www-data is a common web server user and group)
+        chown($directoryPath, 'www-data');
+        chgrp($directoryPath, 'www-data');
+        $qrCodeFileName = "P_IMG/$authenticationToken/$filename.png";
+        QRcode::png($data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);
+        return $qrCodeFileName;
+    } else {
+        $qrCodeFileName = "P_IMG/$authenticationToken/$filename.png";
+        QRcode::png($data, $qrCodeFileName, QR_ECLEVEL_L, 10, 2);
+        return $qrCodeFileName;
+    }
 }
 
 
-header("Location: index.php");
-exit();
-
-if(isset($_POST['p_upi_submit'])) {
-    $upi_id = $_POST['upi_id'];
-    $f_name = $_POST['upi_first_name'];
-    $l_name = $_POST['upi_last_name'];
-    $amount = $_POST['upi_amount'];
+if(isset($_POST['upi'])) {
+    $upi_id = $_POST['id'];
+    $f_name = $_POST['first_name'];
+    $l_name = $_POST['last_name'];
+    $amount = $_POST['amount'];
     $filename = $_POST['filename'];
     $authentication_token = $_POST['authentication_token'];
     $user_name = $f_name.$l_name;
@@ -32,7 +43,7 @@ if(isset($_POST['p_upi_submit'])) {
     $response['filename'] = $filename;
     $response['qrCodeFileName'] = $qrCodeFileName;
     echo json_encode($response);
-} elseif(isset($_POST['p_text_submit'])) {
+} elseif(isset($_POST['text'])) {
     $qr_data = $_POST['text'];
     $filename = $_POST['filename'];
     $authentication_token = $_POST['authentication_token'];
@@ -43,7 +54,7 @@ if(isset($_POST['p_upi_submit'])) {
     $response['filename'] = $filename;
     $response['qrCodeFileName'] = $qrCodeFileName;
     echo json_encode($response);
-} elseif(isset($_POST['p_url_submit'])) {
+} elseif(isset($_POST['url'])) {
     $qr_data = $_POST['url'];
     $filename = $_POST['filename'];
     $authentication_token = $_POST['authentication_token'];
@@ -54,7 +65,7 @@ if(isset($_POST['p_upi_submit'])) {
     $response['filename'] = $filename;
     $response['qrCodeFileName'] = $qrCodeFileName;
     echo json_encode($response);
-} elseif(isset($_POST['p_wifi_submit'])) {
+} elseif(isset($_POST['wifi'])) {
     $ssid = $_POST['ssid'];
     $password = $_POST['password'];
     $auth_type = $_POST['encrypt'];
