@@ -5,8 +5,7 @@ error_reporting(E_ALL);
 
 require 'config.php';
 
-session_unset();
-session_destroy();
+
 function generateRandomString($length) {
     $characters = '${Ac@R*0nzABCD21#E49FGU}H^I!bc78\de4fg6KT0LM60N0ep4wPQk7l3m7n5RSxlVLij2JXY?G6aZ39"3)Bd%Z]SQ^d/SP4{tWTPqr9stu2vW1xy0z4';
     $randomString = '';
@@ -50,7 +49,7 @@ if(isset($_POST["submit"])) {
 
             // Mobile number verification
             if(is_numeric($mobile) && strlen($mobile) === 10 && !in_array(substr($mobile, 0, 4), $invalid_prefixes)) {
-                $directoryPath = "P_IMG/$authenticationToken";
+                $directoryPath = "P_IMG/$secure_key";
                 if($ac_type == 'Stater') {
                     $total_request = 0;
                     $maxRequest = 20;
@@ -126,6 +125,7 @@ if(isset($_POST["submit"])) {
     <meta property="og:url" content="https://theqrcode.site">
     <link rel="stylesheet" href="CSS/root.css">
     <link rel="stylesheet" href="CSS/login.css">
+    <!-- <link rel="stylesheet" href="CSS/home.css"> -->
     <title>SPP Technologies Registration System</title>
     <style>
         select {
