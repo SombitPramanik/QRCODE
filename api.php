@@ -82,7 +82,7 @@ if(isset($_POST['upi'])) {
     echo json_encode($response);
 } else {
     $response['status'] = 'error';
-    $response['message'] = 'Form submission failed.';
+    $response['message'] = 'Invalid Request Received, Wrong Formate, Read the Documentation';
     echo json_encode($response);
 }
 ?>
