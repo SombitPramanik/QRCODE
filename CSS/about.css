@@ -20,3 +20,19 @@
     text-align: center;
     margin: 20px 0; 
 }
+.q5{
+    display:flex;
+    justify-content:space-evenly;
+}
+.namebox1{
+padding:20%;
+
+}
+.namebox2{
+    padding:20%;
+    
+    }
+.namebox3{
+        padding:20%;
+        
+        }
