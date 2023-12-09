@@ -1,14 +1,16 @@
-.about-content h1{
+.about-content h1 {
     text-align: center;
 
 }
-.main_contaient{
+
+.main_contaient {
     display: flex;
     height: 75%;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.q{
+
+.q {
     border: 2px dashed green;
     border-radius: 10px;
     margin: 5px;
@@ -16,23 +18,24 @@
     padding: 10px;
 
 }
-.q i{
+
+.q i {
     text-align: center;
-    margin: 20px 0; 
+    margin: 20px 0;
 }
 .q5{
     display:flex;
-    justify-content:space-evenly;
+    flex-direction:column;
 }
-.namebox1{
-padding:20%;
+.teamname{
+    display: flex;
+    justify-content:space-around;
+}
 
+#closeAbout{
+    position: absolute;
+    bottom: 0;
+    top:90%;
+    left: 0;
+    right: 90%;
 }
-.namebox2{
-    padding:20%;
-    
-    }
-.namebox3{
-        padding:20%;
-        
-        }
