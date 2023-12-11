@@ -70,18 +70,23 @@ if (!isset($_SESSION['unique_token'])) {
 </head>
 
 <body id="theme-switcher" class="light-theme">
-    <form method="POST" action="">
-        <h1>Sorry :( we don't Found any Session Token in your System</h1><br>
-        <p>Please Provide Some Information to Load the Beauties</p><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" autocomplete="email" placeholder="Just write your email" name="email" required><br>
-        <label for="password">password:</label><br>
-        <input type="password" autocomplete="new-password" id="password" placeholder="Just write your Password" name="password" required><br>
+    <div class="max-section">
+        <form method="POST" action="">
+            <h1>Sorry :( we don't Found any Session Token in your System</h1><br>
+            <p>Please Provide Some Information to Load the Beauties</p><br>
+            <!-- <label for="email">Email:</label><br> -->
+            <input type="email" id="email" autocomplete="email" placeholder="Write up your Email" name="email"
+                required><br>
+            <!-- <label for="password">password:</label><br> -->
+            <input type="password" autocomplete="new-password" id="password" placeholder="Write the Password in me"
+                name="password" required><br>
 
 
-        <input type="submit" name="submit" value="Login" class="submit_btn">
-        <p></p>Don't Have an Account :( Just <a href="regiester.php">Create One.</a> <br><br>
-    </form>
+            <input type="submit" name="submit" value="Login" class="submit_btn">
+            <p></p>Don't Have an Account :( Just <a href="regiester.php">Create One.</a> <br><br>
+        </form>
+    </div>
+
 
 </body>
 <script src="JS/theme.js"></script>

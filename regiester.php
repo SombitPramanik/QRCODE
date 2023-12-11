@@ -141,29 +141,28 @@ if(isset($_POST["submit"])) {
 
 <body id="theme-switcher" class="light-theme">
     <form method="POST" action="">
-        <h1>Create an Account</h1><br>
-        <label for="f_name">First Name:</label><br>
-        <input type="text" id="f_name" placeholder="Enter your First Name" name="f_name" required><br>
-        <label for="l_name">Last Name:</label><br>
-        <input type="text" id="l_name" placeholder="Enter your Last Name" name="l_name" required><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" autocomplete="email" placeholder="Enter your Email" name="email" required><br>
-        <label for="m_num">Mobile Number:</label><br>
-        <input type="tel" id="m_num" placeholder="Enter your Mobile Number" name="m_num" required><br>
-        <label for="password">Password:</label><br>
-        <input type="password" autocomplete="new-password" id="password" placeholder="Enter your Password"
-            name="password" required><br>
-        <label for="c_password">Confirm Password:</label><br>
-        <input type="password" autocomplete="new-password" id="c_password" placeholder="Confirm your Password"
-            name="c_password" required><br>
-        <label for="ac_type">Account Type:</label><br>
+        <h1>Create an Account</h1>
+        <!-- <label for="f_name">First Name:</label><br> -->
+        <input type="text" id="f_name" placeholder="What is your First Name" name="f_name" required>
+        <!-- <label for="l_name">Last Name:</label><br> -->
+        <input type="text" id="l_name" placeholder="Just tell me the Last Name" name="l_name" required>
+        <!-- <label for="email">Email:</label><br> -->
+        <input type="email" id="email" autocomplete="email" placeholder="Give me your Email" name="email" required>
+        <!-- <label for="m_num">Mobile Number:</label><br> -->
+        <input type="tel" id="m_num" placeholder="Leave your Phone Number" name="m_num" required>
+        <!-- <label for="password">Password:</label><br> -->
+        <input type="password" autocomplete="new-password" id="password" placeholder="Set a Grate Password"
+            name="password" required>
+        <!-- <label for="c_password">Confirm Password:</label><br> -->
+        <input type="password" autocomplete="new-password" id="c_password" placeholder="Retype that password"
+            name="c_password" required>
+        <label for="ac_type">Account Type:</label>
         <select id="ac_type" name="ac_type" required>
             <option value="Starter">Starter</option>
             <option value="Premium">Premium</option>
             <option value="Business">Business</option>
             <!-- Add more account types if needed -->
-        </select><br>
-
+        </select>
         <input type="submit" name="submit" value="Register" class="submit_btn">
         <p>Already have an account? <a href="login.php">Login here.</a></p>
     </form>
