@@ -129,7 +129,7 @@ if(isset($_POST["submit"])) {
     <style>
         select {
             border-radius: 10px;
-            width: 90%;
+            width: 80%;
             height: 30px;
             padding: 5px 10px;
             text-align: center;
@@ -139,6 +139,7 @@ if(isset($_POST["submit"])) {
 </head>
 
 <body id="theme-switcher" class="light-theme">
+<div class="max-section">
     <form method="POST" action="">
         <h1>Create an Account</h1>
         <!-- <label for="f_name">First Name:</label><br> -->
@@ -165,6 +166,7 @@ if(isset($_POST["submit"])) {
         <input type="submit" name="submit" value="Register" class="submit_btn">
         <p>Already have an account? <a href="login.php">Login here.</a></p>
     </form>
+</div>
 
 </body>
 <script src="JS/theme.js"></script>

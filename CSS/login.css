@@ -32,6 +32,10 @@ input{
     border-radius: 10px;
     margin: 10px 0;
     color: white;
+
+}
+input[type="submit"] {
+    color: black ;
 }
 .submit_btn{
     background-color: aliceblue;
@@ -46,6 +50,7 @@ a{
     .max-section{
         /* border: 2px solid red; */
         align-self: center;
+        width: 60vw;
         max-width: 80vw;
     }
 }

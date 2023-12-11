@@ -73,14 +73,14 @@ if (!isset($_SESSION['unique_token'])) {
 <body id="theme-switcher" class="light-theme">
     <div class="max-section">
         <form method="POST" action="">
-            <h1>Sorry :( we don't Found any Session Token in your System</h1><br>
+            <h1>Sorry :( we don't Found any Session Token in your System</h1>
             <p>Please Provide Some Information to Load the Beauties</p><br>
             <!-- <label for="email">Email:</label><br> -->
             <input type="email" id="email" autocomplete="email" placeholder="Write up your Email" name="email"
-                required><br>
+                required>
             <!-- <label for="password">password:</label><br> -->
             <input type="password" autocomplete="new-password" id="password" placeholder="Write the Password in me"
-                name="password" required><br>
+                name="password" required>
 
 
             <input type="submit" name="submit" value="Login" class="submit_btn">
