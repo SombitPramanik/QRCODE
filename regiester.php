@@ -41,7 +41,7 @@ if(isset($_POST["submit"])) {
             $hashedString = md5($rawString.$salt);
             $random_key = generateRandomString(40);
             $key = hash('sha256', $hashedString.$rawString.$random_key);
-            $secure_key = substr($key, 0, 15);
+            $secure_key = substr($key, 0, 20);
             // Insert user data into the database
             $unique_token = substr(hash('sha256', $email.$hashed_password), 0, 30);
             $_SESSION['unique_token'] = $unique_token;
