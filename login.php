@@ -12,19 +12,21 @@ if (!isset($_SESSION['unique_token'])) {
         require 'config.php';
 
         // Fetch the hashed password from the database based on the provided username/email
-        $query = "SELECT email, password FROM normal_user WHERE email = '$email'";
+        $query = "SELECT email, password, authentication_token FROM normal_user WHERE email = '$email'";
         $result = mysqli_query($conn, $query);
 
         if ($result) {
             if (mysqli_num_rows($result) > 0) {
                 $row = mysqli_fetch_assoc($result);
                 $hashed_password = $row["password"];
+                $authentication_token = $row["authentication_token"];
+
 
                 // Verify the hashed password
                 if (password_verify($password, $hashed_password)) {
                     // Generate a unique session token based on the hash of email and password
-                    $unique_token = substr(hash('sha256', $username . $password), 0, 30);
-                    $_SESSION['unique_token'] = $unique_token;
+                    // $unique_token = substr(hash('sha256', $email . $password), 0, 30);
+                    $_SESSION['unique_token'] = $authentication_token;
 
                     // Check if the user is not already on the PostLogIN.php page before redirecting
                     if (basename($_SERVER['PHP_SELF']) != 'PostLogIN') {
@@ -76,8 +78,7 @@ if (!isset($_SESSION['unique_token'])) {
             <h1>Sorry :( we don't Found any Session Token in your System</h1>
             <p>Please Provide Some Information to Load the Beauties</p><br>
             <!-- <label for="email">Email:</label><br> -->
-            <input type="email" id="email" autocomplete="email" placeholder="Write up your Email" name="email"
-                required>
+            <input type="email" id="email" autocomplete="email" placeholder="Write up your Email" name="email" required>
             <!-- <label for="password">password:</label><br> -->
             <input type="password" autocomplete="new-password" id="password" placeholder="Write the Password in me"
                 name="password" required>

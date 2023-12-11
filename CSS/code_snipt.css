@@ -1,5 +1,5 @@
 pre {
-    height: 100px;
+    height: max-content+50px;
     position: relative;
     background:black;
     padding: 30px 10px;
