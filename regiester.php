@@ -125,7 +125,6 @@ if(isset($_POST["submit"])) {
     <meta property="og:url" content="https://theqrcode.site">
     <link rel="stylesheet" href="CSS/root.css">
     <link rel="stylesheet" href="CSS/login.css">
-    <!-- <link rel="stylesheet" href="CSS/home.css"> -->
     <title>SPP Technologies Registration System</title>
     <style>
         select {

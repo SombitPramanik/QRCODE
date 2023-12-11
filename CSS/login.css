@@ -31,6 +31,7 @@ input{
     text-align: center;
     border-radius: 10px;
     margin: 10px 0;
+    color: white;
 }
 .submit_btn{
     background-color: aliceblue;

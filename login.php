@@ -66,6 +66,7 @@ if (!isset($_SESSION['unique_token'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/root.css">
     <link rel="stylesheet" href="CSS/login.css">
+    <!-- <link rel="stylesheet" href="CSS/home.css">     -->
     <title>SPP Technologies Login System</title>
 </head>
 

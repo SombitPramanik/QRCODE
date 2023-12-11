@@ -294,3 +294,6 @@ option{
 .stat ul li{
     list-style-type: none;
 }
+input{
+    color: white;
+}
