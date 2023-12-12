@@ -643,7 +643,7 @@
                             <p>Tryout Your API</p>
                             <pre class="myPreTag">
                                 <?php
-                                    echo "https://api.theqrcode.site/?upi&authentication_token=".($_SESSION['unique_token']) ."&id=5646879@ybl&first_name=soumen&last_name=tunga&amount=500&filename=soumen";
+                                    echo "https://api.theqrcode.site/?upi&authentication_token=".($_SESSION['unique_token']) ."&id={Receiver UPI Id}&first_name={Receiver_First_Name}&last_name={Receiver_Last_Name}&amount={Wanted_amount}";
                                 ?>
                             </pre>
                         </ol>
@@ -662,9 +662,11 @@
                         <p>
                         <ol>
                             <p>Tryout Your API</p>
-                            <pre class="myPreTag">    <?php
-    echo "<h1>" . trim($_SESSION['unique_token']) . "</h1>";
-    ?>pi.theqrcode.site/yourAuthenticatioTocken/upiID%20name%20Amount%20message</pre>
+                            <pre class="myPreTag">
+                                <?php
+                                    echo "https://api.theqrcode.site/?text&authentication_token=".($_SESSION['unique_token']) ."text={your%20wanted%20text}";
+                                ?>
+                            </pre>
                         </ol>
                         </p>
                     </div>
@@ -694,9 +696,11 @@
                         <p>
                         <ol>
                             <p>Tryout Your API</p>
-                            <pre class="myPreTag">    <?php
-    echo "<h1>" . trim($_SESSION['unique_token']) . "</h1>";
-    ?>pi.theqrcode.site/yourAuthenticatioTocken/upiID%20name%20Amount%20message</pre>
+                            <pre class="myPreTag">
+                                <?php
+                                    echo "https://api.theqrcode.site/?url&authentication_token=".($_SESSION['unique_token']) ."&url={https://[your_URL]}";
+                                ?>
+                            </pre>
                         </ol>
                         </p>
                     </div>
@@ -722,9 +726,11 @@
                         <p>
                         <ol>
                             <p>Tryout Your API</p>
-                            <pre class="myPreTag">    <?php
-    echo "<h1>" . trim($_SESSION['unique_token']) . "</h1>";
-    ?>pi.theqrcode.site/yourAuthenticatioTocken/upiID%20name%20Amount%20message</pre>
+                            <pre class="myPreTag">
+                                <?php
+                                    echo "https://api.theqrcode.site/?wifi&authentication_token=".($_SESSION['unique_token']) ."&ssid={WIFI_SSID}&password={WIFI_password}&net_typ={Network_type=Hidden OR Visible}&encrypt={Encription_type=[WPA OR WPA2]}";
+                                ?>
+                            </pre>
                         </ol>
                         </p>
                     </div>
