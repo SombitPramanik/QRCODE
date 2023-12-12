@@ -44,7 +44,7 @@ li{
 .name{
     font-size: 25px;
     padding:6px;
-    margin:20px;
+    margin:20px 0px;
     text-align:start;
 }
 #closeAbout{
