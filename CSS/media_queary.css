@@ -106,34 +106,60 @@
         text-align: center;
         padding: 5px;
     }
-    .contact-content{
+
+    .contact-content {
         height: 50vh;
     }
+
+    .price_container,
+    .bar_layout {
+        flex-direction: column;
+    }
+
+    .pricing-plan {
+        width: 120%;
+
+    }
+
+    .pricing-plan button {
+        width: 20vw;
+    }
+
+    .basic,
+    .common,
+    .advance {
+        padding: 10px 20px;
+        width: unset;
+        height: unset;
+        border-bottom: 2px dashed gray;
+        border-top: 2px dashed  gray;
+        border-radius: 10px;
+    }
+
+    .button_hr {
+        margin: 10px;
+    }
+
+    pre {
+        margin-top: 10px;
+    }
+
+
 }
 
-@media screen and (max-width:340px) {
-
-}
-@media screen and (min-width:341px) and (max-width:425px){
-
-}
-
+/* Larger screens min = tablet max = large laptop */
 @media screen and (min-width: 761px) {
     footer {
         display: none;
     }
-    .stat{
+
+    .stat {
         display: none;
     }
-    *{
+
+    * {
         overflow-x: hidden;
     }
 
 
 }
-/* @media screen and (min-width: 769px) and (max-width:1025px) {
-    .qr_img>img{
-        width: 20vw;
-        height: 25vh;
-    }
-} */
