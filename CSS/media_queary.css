@@ -1,0 +1,139 @@
+@media screen and (min-width:0px) and (max-width:800px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    body {
+        flex-direction: column;
+
+    }
+
+    .left_menu,
+    .right_menu {
+        width: 100vw;
+        display: block;
+    }
+
+    .profile_text ul {
+        width: 100% !important;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .nav_devider,
+    .menu_devider,
+    .nav_bar,
+    .copy,
+    .output_hr,
+    .stat {
+        display: none;
+    }
+
+    .tag {
+        font-size: 1rem;
+    }
+
+    .top_brand {
+        width: 95vw;
+        height: 50px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .input_fields {
+        width: 100%;
+        height: auto;
+    }
+
+    .left_menu {
+        display: none;
+    }
+
+    .myForm {
+        height: max-content;
+    }
+
+    button {
+        width: auto;
+        padding: 2px 5px;
+    }
+
+    .output_fields {
+        flex-direction: column;
+        width: 95vw;
+        /* border: 2px solid red; */
+        display: flex;
+        height: max-content;
+    }
+
+    .qr_img {
+        width: 100%;
+    }
+
+    .qr_img>img {
+        width: 25vh;
+    }
+
+    .main_down {
+        width: 65vw;
+
+    }
+
+    footer {
+        border-top: 2px dashed gray;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    footer ol {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    footer ol li {
+        margin: 5px;
+        text-align: center;
+        /* height: 22px; */
+        padding: 5px;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+
+    footer ol li a {
+        margin: 10px 0;
+        text-align: center;
+        padding: 5px;
+    }
+    .contact-content{
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width:340px) {
+
+}
+@media screen and (min-width:341px) and (max-width:425px){
+
+}
+
+@media screen and (min-width: 761px) {
+    footer {
+        display: none;
+    }
+    .stat{
+        display: none;
+    }
+    *{
+        overflow-x: hidden;
+    }
+
+
+}
+/* @media screen and (min-width: 769px) and (max-width:1025px) {
+    .qr_img>img{
+        width: 20vw;
+        height: 25vh;
+    }
+} */

@@ -1,0 +1,12 @@
+.privacy-content{
+    text-transform: capitalize;
+
+}
+.privacy-content h2{
+    text-align: center;
+    text-transform: uppercase;
+
+}
+strong{
+    text-decoration: wavy;
+}

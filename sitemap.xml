@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://theqrcode.site/</loc>
+  <lastmod>2023-11-29T05:53:40+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/Help.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/About.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/Privacy.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/Declaimer.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/Pricing.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://theqrcode.site/Contact.html</loc>
+  <lastmod>2023-11-29T05:52:13+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

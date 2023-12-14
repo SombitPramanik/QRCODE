@@ -1,0 +1,56 @@
+* {
+    overflow-x: hidden;
+    font-family: 'Ubuntu Mono', monospace;
+}
+form{
+    display: grid;
+    gap: 10px;
+    place-items: center;
+    border: 2px dashed green;
+    padding: 20px;
+    margin: 5vh  2vw;
+    border-radius: 10px;
+}
+body{
+    justify-content: center;
+    display: flex;
+
+}
+h1{
+    text-align: center;
+    font-size: 21px;
+}
+form:first-child p{
+    text-align: center;
+}
+input{
+    background-color: transparent;
+    border: 2px solid aqua;
+    width: 80%;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px 0;
+    color: white;
+
+}
+input[type="submit"] {
+    color: black ;
+}
+.submit_btn{
+    background-color: aliceblue;
+    font-size: 18px;
+    font-style: oblique;
+
+}
+a{
+    text-decoration: underline;
+}
+@media screen and (min-width:768px) {
+    .max-section{
+        /* border: 2px solid red; */
+        align-self: center;
+        width: 60vw;
+        max-width: 80vw;
+    }
+}
