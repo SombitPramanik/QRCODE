@@ -31,7 +31,8 @@ $(document).ready(function () {
             dataType: "json", // Expect JSON response
             success: function (response) {
                 // Handle the server response
-                console.log(response.status, response.message, response.qrCodeFileName);
+                console.log(response.status, response.filename);
+                
             },
             error: function (error) {
                 // Handle errors if the request fails

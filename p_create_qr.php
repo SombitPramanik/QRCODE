@@ -7,9 +7,6 @@ require 'phpqrcode-2010100721_1.1.4/phpqrcode/qrlib.php';
 
 $response = array(); // Create an array to store the response
 
-header("Location: index.php");
-exit();
-
 if(isset($_POST['p_upi_submit'])) {
     $upi_id = $_POST['upi_id'];
     $f_name = $_POST['upi_first_name'];
@@ -40,13 +37,13 @@ if(isset($_POST['p_upi_submit'])) {
 } elseif(isset($_POST['p_url_submit'])) {
     $qr_data = $_POST['url'];
     $filename = $_POST['filename'];
-    $authentication_token = $_POST['authentication_token'];
+    // $authentication_token = $_POST['authentication_token'];
 
     $qrCodeFileName = generateQRCode($qr_data, $filename, $authentication_token);
 
     $response['status'] = 'success';
     $response['filename'] = $filename;
-    $response['qrCodeFileName'] = $qrCodeFileName;
+    // $response['qrCodeFileName'] = $qrCodeFileName;
     echo json_encode($response);
 } elseif(isset($_POST['p_wifi_submit'])) {
     $ssid = $_POST['ssid'];
@@ -54,14 +51,14 @@ if(isset($_POST['p_upi_submit'])) {
     $auth_type = $_POST['encrypt'];
     $hidden_ssid = $_POST['net_typ'];
     $filename = $_POST['filename'];
-    $authentication_token = $_POST['authentication_token'];
+    // $authentication_token = $_POST['authentication_token'];
     $qr_data = "WIFI:S:$ssid;T:$auth_type;P:$password;H:$hidden_ssid;;";
 
     $qrCodeFileName = generateQRCode($qr_data, $filename, $authentication_token);
 
     $response['status'] = 'success';
     $response['filename'] = $filename;
-    $response['qrCodeFileName'] = $qrCodeFileName;
+    // $response['qrCodeFileName'] = $qrCodeFileName;
     echo json_encode($response);
 } else {
     // If the form wasn't submitted correctly
@@ -72,6 +69,3 @@ if(isset($_POST['p_upi_submit'])) {
     echo json_encode($response);
 }
 ?>
-
-
-
