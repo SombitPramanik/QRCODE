@@ -6,12 +6,31 @@ require 'config.php';
 require 'phpqrcode-2010100721_1.1.4/phpqrcode/qrlib.php';
 $response = array(); // Create an array to store the response
 
+function generateRandomString()
+{
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $randomString = '';
+
+    for ($i = 0; $i < 10; $i++) {
+        $index = rand(0, strlen($characters) - 1);
+        $randomString .= $characters[$index];
+    }
+
+    return $randomString;
+}
+
 function filename($authenticationToken)
 {
     $salt = "SPPTechnologies";
-    $name = substr(hash('sha256',$authenticationToken.$salt),0,6);    
+    $name = substr(hash('sha256', $authenticationToken . $salt), 0, 6);
+
+    // Append a random string to the generated name
+    $randomString = generateRandomString();
+    $name .= $randomString;
+
     return $name;
 }
+
 function generateQRCode($data, $filename, $authenticationToken)
 {
 
